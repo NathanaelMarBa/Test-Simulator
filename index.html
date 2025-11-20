@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normatividad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl flex flex-col min-h-[400px]">
+        <div id="menu" class="text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Selecciona un modo</h2>
+            <div id="questionStatus" class="mb-4 p-2 rounded bg-gray-100">
+                <span class="text-sm text-gray-600">Preguntas cargadas: <span id="questionCount" class="font-bold">0</span></span>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <button id="practiceBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">Modo Práctica</button>
+                <button id="examBtn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">Modo Examen</button>
+                <div class="flex flex-col space-y-2">
+                    <button id="downloadBtn" class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors">Descargar JSON</button>
+                    <button id="loadBtn" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition-colors">Cargar JSON</button>
+                    <button id="clearBtn" class="bg-slate-500 text-white px-4 py-2 rounded hover:bg-slate-600 text-sm transition-colors">Limpiar Datos</button>
+                    <input type="file" id="fileInput" accept=".json" style="display: none;">
+                </div>
+            </div>
+        </div>
+
+        <div id="practiceContainer" class="hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Modo Práctica</h2>
+            <div id="questionContainer"></div>
+            <p id="result" class="text-green-600 mt-4 hidden font-semibold">¡Correcto!</p>
+            <p id="error" class="text-red-600 mt-4 hidden font-semibold">Incorrecto, intenta de nuevo.</p>
+            <div class="mt-6 flex flex-col space-y-4">
+                <button id="submitBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">Resolver</button>
+                <div class="flex space-x-4">
+                    <button id="nextBtn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 hidden transition-colors">Siguiente</button>
+                    <button id="backToMenuPractice" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors">Volver al Menú</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="examContainer" class="hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Modo Examen</h2>
+            <div id="examProgress" class="mb-4 bg-gray-200 rounded-full h-2">
+                <div id="progressBar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+            <div id="examQuestionContainer"></div>
+            <div id="examResults" class="mt-4"></div>
+            <div class="mt-6 flex flex-col space-y-4">
+                <button id="examSubmitBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">Resolver</button>
+                <div class="flex space-x-4">
+                    <button id="backToMenuExam" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors">Volver al Menú</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // === CONFIGURACIÓN Y VARIABLES GLOBALES ===
+        let questions = [];
+        let currentQuestion = 0;
+        let mode = 'menu';
+        let examAnswers = [];
+        let examQuestions = [];
+        let practiceQuestions = [];
+        let recentPracticeQuestions = [];
+        
+        const CONFIG = {
+            RECENT_QUESTION_LIMIT: 5,
+            EXAM_QUESTION_COUNT: 10,
+            STORAGE_KEY: 'questionsData',
+            AUTO_SAVE_MESSAGE_DURATION: 3000
+        };
+
+        // === UTILIDADES DE LOCALSTORAGE ===
+        const Storage = {
+            isAvailable() {
+                try {
+                    const test = '__localStorage_test__';
+                    localStorage.setItem(test, test);
+                    localStorage.removeItem(test);
+                    return true;
+                } catch (e) {
+                    return false;
+                }
+            },
+
+            save() {
+                if (!this.isAvailable()) return false;
+                
+                try {
+                    const data = {
+                        title: document.title,
+                        questions: questions,
+                        timestamp: new Date().toISOString()
+                    };
+                    localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(data));
+                    return localStorage.getItem(CONFIG.STORAGE_KEY) !== null;
+                } catch (error) {
+                    console.error('Error guardando datos:', error);
+                    return false;
+                }
+            },
+
+            load() {
+                if (!this.isAvailable()) return false;
+                
+                try {
+                    const saved = localStorage.getItem(CONFIG.STORAGE_KEY);
+                    if (!saved) return false;
+                    
+                    const data = JSON.parse(saved);
+                    if (!data.questions?.length) return false;
+                    
+                    questions.length = 0;
+                    questions.push(...data.questions);
+                    
+                    if (data.title && data.title !== 'Normatividad') {
+                        document.title = data.title;
+                        const pageHeader = document.querySelector('h2');
+                        if (pageHeader) pageHeader.textContent = data.title;
+                    }
+                    
+                    return true;
+                } catch (error) {
+                    console.error('Error cargando datos:', error);
+                    return false;
+                }
+            },
+
+            clear() {
+                if (this.isAvailable()) {
+                    localStorage.removeItem(CONFIG.STORAGE_KEY);
+                }
+            }
+        };
+
+        // === UTILIDADES GENERALES ===
+        const Utils = {
+            shuffleArray(array) {
+                const shuffled = [...array];
+                for (let i = shuffled.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+                }
+                return shuffled;
+            },
+
+            getRandomQuestion(availableQuestions, recentQuestions) {
+                const validQuestions = availableQuestions.filter(q => !recentQuestions.includes(q));
+                if (validQuestions.length === 0) {
+                    recentQuestions.length = 0;
+                    return availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+                }
+                return validQuestions[Math.floor(Math.random() * validQuestions.length)];
+            },
+
+            validateQuestionStructure(questions) {
+                if (!Array.isArray(questions) || questions.length === 0) {
+                    throw new Error('No se encontraron preguntas válidas');
+                }
+
+                questions.forEach((q, i) => {
+                    if (!q.question || !Array.isArray(q.options) || !q.correct) {
+                        throw new Error(`La pregunta ${i + 1} no tiene la estructura correcta`);
+                    }
+                    if (q.options.length < 2) {
+                        throw new Error(`La pregunta ${i + 1} debe tener al menos 2 opciones`);
+                    }
+                    if (!q.options.includes(q.correct)) {
+                        throw new Error(`La respuesta correcta de la pregunta ${i + 1} no está en las opciones`);
+                    }
+                });
+            }
+        };
+
+        // === GESTIÓN DE UI ===
+        const UI = {
+            updateQuestionCounter() {
+                const statusDiv = document.getElementById('questionStatus');
+                if (!statusDiv) return;
+                
+                if (questions.length === 0) {
+                    statusDiv.className = 'mb-4 p-2 rounded bg-red-100';
+                    statusDiv.innerHTML = '<span class="text-sm text-red-600">No hay preguntas cargadas. <span class="font-bold">Carga un archivo JSON</span></span>';
+                } else {
+                    statusDiv.className = 'mb-4 p-2 rounded bg-green-100';
+                    statusDiv.innerHTML = `<span class="text-sm text-green-600">Preguntas cargadas: <span class="font-bold">${questions.length}</span></span>`;
+                }
+            },
+
+            showAutoLoadMessage() {
+                if (questions.length === 0) return;
+                
+                const statusDiv = document.getElementById('questionStatus');
+                if (!statusDiv) return;
+                
+                statusDiv.className = 'mb-4 p-2 rounded bg-blue-100';
+                statusDiv.innerHTML = `<span class="text-sm text-blue-600">📁 Datos cargados automáticamente: <span class="font-bold">${questions.length} preguntas</span></span>`;
+                
+                setTimeout(() => this.updateQuestionCounter(), CONFIG.AUTO_SAVE_MESSAGE_DURATION);
+            },
+
+            updateExamProgress() {
+                const progressBar = document.getElementById('progressBar');
+                if (progressBar && examQuestions.length > 0) {
+                    const progress = ((currentQuestion + 1) / examQuestions.length) * 100;
+                    progressBar.style.width = `${progress}%`;
+                }
+            },
+
+            loadQuestion(index, containerId) {
+                const q = mode === 'practice' ? practiceQuestions[index] : examQuestions[index];
+                const container = document.getElementById(containerId);
+                
+                container.innerHTML = `
+                    <div class="question">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">${index + 1}. ${q.question}</h3>
+                        <div class="space-y-2">
+                            ${q.options.map((option, i) => `
+                                <div class="option">
+                                    <label class="flex items-center p-2 rounded hover:bg-gray-50 cursor-pointer">
+                                        <input type="radio" name="answer" value="${option}" id="option${i}" class="mr-3">
+                                        <span class="text-gray-700">${option}</span>
+                                    </label>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                
+                if (mode === 'practice') {
+                    document.getElementById('result').classList.add('hidden');
+                    document.getElementById('error').classList.add('hidden');
+                    document.getElementById('submitBtn').classList.remove('hidden');
+                    document.getElementById('nextBtn').classList.add('hidden');
+                } else {
+                    document.getElementById('examSubmitBtn').classList.remove('hidden');
+                    this.updateExamProgress();
+                }
+            },
+
+            showView(viewId) {
+                ['menu', 'practiceContainer', 'examContainer'].forEach(id => {
+                    document.getElementById(id).classList.add('hidden');
+                });
+                document.getElementById(viewId).classList.remove('hidden');
+            }
+        };
+
+        // === LÓGICA DE JUEGO ===
+        const Game = {
+            startPractice() {
+                if (questions.length === 0) {
+                    alert('No hay preguntas cargadas. Por favor, carga un archivo JSON con preguntas.');
+                    return;
+                }
+                
+                mode = 'practice';
+                currentQuestion = 0;
+                practiceQuestions = Utils.shuffleArray(questions);
+                recentPracticeQuestions = [];
+                
+                UI.showView('practiceContainer');
+                UI.loadQuestion(currentQuestion, 'questionContainer');
+            },
+
+            startExam() {
+                if (questions.length === 0) {
+                    alert('No hay preguntas cargadas. Por favor, carga un archivo JSON con preguntas.');
+                    return;
+                }
+                
+                mode = 'exam';
+                currentQuestion = 0;
+                examAnswers = [];
+                
+                const questionsToUse = Math.min(CONFIG.EXAM_QUESTION_COUNT, questions.length);
+                examQuestions = Utils.shuffleArray(questions).slice(0, questionsToUse);
+                
+                UI.showView('examContainer');
+                document.getElementById('examResults').innerHTML = '';
+                UI.loadQuestion(currentQuestion, 'examQuestionContainer');
+            },
+
+            submitPracticeAnswer() {
+                const selected = document.querySelector('#practiceContainer input[name="answer"]:checked');
+                if (!selected) {
+                    alert('Por favor selecciona una respuesta');
+                    return;
+                }
+                
+                const answer = selected.value;
+                const q = practiceQuestions[currentQuestion];
+                
+                if (answer === q.correct) {
+                    document.getElementById('result').classList.remove('hidden');
+                    document.getElementById('nextBtn').classList.remove('hidden');
+                    document.getElementById('submitBtn').classList.add('hidden');
+                } else {
+                    document.getElementById('error').classList.remove('hidden');
+                }
+            },
+
+            nextPracticeQuestion() {
+                recentPracticeQuestions.push(practiceQuestions[currentQuestion]);
+                if (recentPracticeQuestions.length > CONFIG.RECENT_QUESTION_LIMIT) {
+                    recentPracticeQuestions.shift();
+                }
+                
+                const nextQuestion = Utils.getRandomQuestion(practiceQuestions, recentPracticeQuestions);
+                currentQuestion = practiceQuestions.indexOf(nextQuestion);
+                UI.loadQuestion(currentQuestion, 'questionContainer');
+            },
+
+            submitExamAnswer() {
+                const selected = document.querySelector('#examContainer input[name="answer"]:checked');
+                if (!selected) {
+                    alert('Por favor selecciona una respuesta');
+                    return;
+                }
+                
+                examAnswers.push(selected.value);
+                currentQuestion++;
+                
+                if (currentQuestion < examQuestions.length) {
+                    UI.loadQuestion(currentQuestion, 'examQuestionContainer');
+                } else {
+                    this.showExamResults();
+                }
+            },
+
+            showExamResults() {
+                let score = 0;
+                let resultsHTML = '';
+                
+                examAnswers.forEach((answer, index) => {
+                    const q = examQuestions[index];
+                    const isCorrect = answer === q.correct;
+                    if (isCorrect) score++;
+                    
+                    resultsHTML += `
+                        <div class="mt-4 p-4 border rounded ${isCorrect ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'}">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Pregunta ${index + 1}</h4>
+                            <p class="text-sm text-gray-600 mb-2">${q.question}</p>
+                            <p class="${isCorrect ? 'text-green-600' : 'text-red-600'} font-medium">
+                                Tu respuesta: ${answer} - ${isCorrect ? '✅ Correcto' : '❌ Incorrecto'}
+                            </p>
+                            ${!isCorrect ? `<p class="text-gray-600 text-sm mt-1"><strong>Respuesta correcta:</strong> ${q.correct}</p>` : ''}
+                        </div>
+                    `;
+                });
+                
+                const percentage = (score / examQuestions.length * 100).toFixed(1);
+                const resultClass = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+                
+                resultsHTML = `
+                    <div class="text-center mb-6 p-4 border rounded ${percentage >= 70 ? 'border-green-200 bg-green-50' : 'border-gray-200 bg-gray-50'}">
+                        <h3 class="text-2xl font-bold ${resultClass}">
+                            Calificación: ${score}/${examQuestions.length} (${percentage}%)
+                        </h3>
+                        <p class="text-gray-600 mt-2">
+                            ${percentage >= 70 ? '🎉 ¡Excelente trabajo!' : percentage >= 50 ? '👍 Buen intento' : '💪 Sigue practicando'}
+                        </p>
+                    </div>
+                ` + resultsHTML;
+                
+                document.getElementById('examResults').innerHTML = resultsHTML;
+                document.getElementById('examQuestionContainer').innerHTML = '';
+                document.getElementById('examSubmitBtn').classList.add('hidden');
+            }
+        };
+
+        // === GESTIÓN DE ARCHIVOS ===
+        const FileManager = {
+            loadFile(file) {
+                return new Promise((resolve, reject) => {
+                    if (file.type !== 'application/json') {
+                        reject(new Error('Por favor selecciona un archivo JSON válido'));
+                        return;
+                    }
+
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        try {
+                            const jsonData = JSON.parse(e.target.result);
+                            resolve(FileManager.parseJsonData(jsonData));
+                        } catch (error) {
+                            reject(new Error('Error al parsear el archivo JSON: ' + error.message));
+                        }
+                    };
+                    reader.onerror = () => reject(new Error('Error al leer el archivo'));
+                    reader.readAsText(file);
+                });
+            },
+
+            parseJsonData(jsonData) {
+                let loadedQuestions, title = null;
+                
+                if (Array.isArray(jsonData)) {
+                    loadedQuestions = jsonData;
+                } else if (jsonData && typeof jsonData === 'object') {
+                    if (jsonData.title && typeof jsonData.title === 'string') {
+                        title = jsonData.title;
+                    }
+                    if (Array.isArray(jsonData.questions)) {
+                        loadedQuestions = jsonData.questions;
+                    } else {
+                        throw new Error('El archivo debe contener un array de preguntas en la propiedad "questions"');
+                    }
+                } else {
+                    throw new Error('El archivo debe contener un array de preguntas o un objeto con propiedades "title" y "questions"');
+                }
+                
+                Utils.validateQuestionStructure(loadedQuestions);
+                return { questions: loadedQuestions, title };
+            },
+
+            async handleFileUpload(event) {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                try {
+                    const { questions: loadedQuestions, title } = await FileManager.loadFile(file);
+                    
+                    questions.length = 0;
+                    questions.push(...loadedQuestions);
+                    
+                    if (title) {
+                        document.title = title;
+                        const pageHeader = document.querySelector('h2');
+                        if (pageHeader) pageHeader.textContent = title;
+                    }
+                    
+                    const saved = Storage.save();
+                    UI.updateQuestionCounter();
+                    
+                    let message = `¡Archivo cargado exitosamente! Se cargaron ${loadedQuestions.length} preguntas.`;
+                    if (title) message += `\nTítulo actualizado: "${title}"`;
+                    message += saved ? '\n\n✅ Los datos se han guardado automáticamente.' 
+                                    : '\n\n⚠️ No se pudieron guardar los datos.';
+                    
+                    alert(message);
+                } catch (error) {
+                    alert(`Error al cargar el archivo: ${error.message}`);
+                } finally {
+                    event.target.value = '';
+                }
+            },
+
+            downloadQuestions() {
+                if (questions.length === 0) {
+                    alert('No hay preguntas para descargar.');
+                    return;
+                }
+                
+                const dataToExport = {
+                    title: document.title,
+                    questions: questions
+                };
+                
+                // Crear nombre de archivo basado en el título
+                let fileName = document.title;
+                
+                // Limpiar caracteres no válidos para nombres de archivo
+                fileName = fileName
+                    .replace(/[<>:"/\\|?*]/g, '') // Quitar caracteres no válidos
+                    .replace(/\s+/g, '_') // Reemplazar espacios con guiones bajos
+                    .toLowerCase(); // Convertir a minúsculas
+                
+                // Si el título está vacío o es muy corto, usar nombre por defecto
+                if (!fileName || fileName.length < 3) {
+                    fileName = 'questions';
+                }
+                
+                const blob = new Blob([JSON.stringify(dataToExport, null, 2)], { 
+                    type: 'application/json' 
+                });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${fileName}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+                
+                // Mostrar información sobre la descarga
+                setTimeout(() => {
+                    alert(
+                        `✅ Archivo descargado exitosamente como: ${fileName}.json\n\n` +
+                        `📁 El archivo se ha guardado en tu carpeta de Descargas.\n\n` +
+                        `💡 Si deseas tenerlo en la misma carpeta que Index.html,\n` +
+                        `muévelo manualmente desde tu carpeta de Descargas.`
+                    );
+                }, 100);
+            },
+
+            clearData() {
+                const confirmed = confirm(
+                    '¿Estás seguro de que quieres limpiar todos los datos guardados?\n\n' +
+                    'Esto eliminará todas las preguntas y el título personalizado.'
+                );
+                
+                if (confirmed) {
+                    Storage.clear();
+                    questions.length = 0;
+                    document.title = 'Normatividad';
+                    
+                    const pageHeader = document.querySelector('h2');
+                    if (pageHeader) pageHeader.textContent = 'Selecciona un modo';
+                    
+                    UI.updateQuestionCounter();
+                    alert('✅ Datos limpiados correctamente.');
+                }
+            }
+        };
+
+        // === EVENT LISTENERS ===
+        function setupEventListeners() {
+            // Navegación
+            document.getElementById('practiceBtn').addEventListener('click', () => Game.startPractice());
+            document.getElementById('examBtn').addEventListener('click', () => Game.startExam());
+            document.getElementById('backToMenuPractice').addEventListener('click', () => UI.showView('menu'));
+            document.getElementById('backToMenuExam').addEventListener('click', () => UI.showView('menu'));
+
+            // Práctica
+            document.getElementById('submitBtn').addEventListener('click', () => Game.submitPracticeAnswer());
+            document.getElementById('nextBtn').addEventListener('click', () => Game.nextPracticeQuestion());
+
+            // Examen
+            document.getElementById('examSubmitBtn').addEventListener('click', () => Game.submitExamAnswer());
+
+            // Gestión de archivos
+            document.getElementById('downloadBtn').addEventListener('click', () => FileManager.downloadQuestions());
+            document.getElementById('loadBtn').addEventListener('click', () => document.getElementById('fileInput').click());
+            document.getElementById('clearBtn').addEventListener('click', () => FileManager.clearData());
+            document.getElementById('fileInput').addEventListener('change', (event) => FileManager.handleFileUpload(event));
+        }
+
+        // === INICIALIZACIÓN ===
+        function initialize() {
+            const dataLoaded = Storage.load();
+            UI.updateQuestionCounter();
+            
+            if (dataLoaded) {
+                setTimeout(() => UI.showAutoLoadMessage(), 100);
+            }
+            
+            setupEventListeners();
+        }
+
+        // Inicializar cuando el DOM esté listo
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initialize);
+        } else {
+            initialize();
+        }
+    </script>
+</body>
+</html>

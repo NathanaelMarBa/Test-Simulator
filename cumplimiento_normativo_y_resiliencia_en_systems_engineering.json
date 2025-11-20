@@ -1,0 +1,1475 @@
+{
+  "title": "Cumplimiento Normativo y Resiliencia es Systems Engineering BBVA",
+  "questions": [
+    {
+      "question": "¿A quién está dirigido principalmente el curso?",
+      "options": [
+        "Personal de auditoría interna",
+        "Personal de desarrollo de sistemas en BBVA México",
+        "Personal de atención al cliente",
+        "Personal de recursos humanos"
+      ],
+      "correct": "Personal de desarrollo de sistemas en BBVA México"
+    },
+    {
+      "question": "¿Cuál es el objetivo principal del curso?",
+      "options": [
+        "Enseñar programación avanzada",
+        "Eliminar el riesgo generado por desconocimiento de normativas",
+        "Reducir costos operativos",
+        "Mejorar la experiencia del usuario final"
+      ],
+      "correct": "Eliminar el riesgo generado por desconocimiento de normativas"
+    },
+    {
+      "question": "¿Qué tipo de impacto NO menciona el documento por incumplimiento?",
+      "options": [
+        "Errores de diseño",
+        "Vulnerabilidades de seguridad",
+        "Pérdida de empleados",
+        "Improductividad por retrabajos"
+      ],
+      "correct": "Pérdida de empleados"
+    },
+    {
+      "question": "¿Cuál es una consecuencia regulatoria del incumplimiento?",
+      "options": [
+        "Aumento de ventas",
+        "Sanciones y pérdida de confianza del cliente",
+        "Mejora en la imagen de marca",
+        "Reducción de tiempos de desarrollo"
+      ],
+      "correct": "Sanciones y pérdida de confianza del cliente"
+    },
+    {
+      "question": "¿Qué genera retrabajos en código y pruebas?",
+      "options": [
+        "Mayor tiempo en revisiones y validaciones",
+        "Uso de nuevas tecnologías",
+        "Capacitación constante",
+        "Automatización de procesos"
+      ],
+      "correct": "Mayor tiempo en revisiones y validaciones"
+    },
+    {
+      "question": "¿Qué tipo de impacto incluye “pérdida patrimonial”?",
+      "options": [
+        "Operativo",
+        "Regulatorio",
+        "Técnico",
+        "De infraestructura"
+      ],
+      "correct": "Regulatorio"
+    },
+    {
+      "question": "¿Qué riesgo se menciona explícitamente por desconocimiento?",
+      "options": [
+        "Impactos productivos",
+        "Aumento de productividad",
+        "Mejora en calidad",
+        "Reducción de costos"
+      ],
+      "correct": "Impactos productivos"
+    },
+    {
+      "question": "¿Qué NO es un impacto mencionado del incumplimiento de las normativas?",
+      "options": [
+        "Deficiente calidad del software",
+        "Incremento en la velocidad de despliegue",
+        "Vulnerabilidades de seguridad",
+        "Incumplimiento regulatorio"
+      ],
+      "correct": "Incremento en la velocidad de despliegue"
+    },
+    {
+      "question": "¿Qué se busca evitar con el curso?",
+      "options": [
+        "Uso de metodologías ágiles",
+        "Incumplimiento de directrices normativas",
+        "Colaboración entre equipos",
+        "Actualización tecnológica"
+      ],
+      "correct": "Incumplimiento de directrices normativas"
+    },
+    {
+      "question": "¿Qué tipo de personal debe conocer las normativas?",
+      "options": [
+        "Solo líderes de proyecto",
+        "Todo el personal que diseña, desarrolla, prueba y despliega",
+        "Solo testers",
+        "Solo arquitectos"
+      ],
+      "correct": "Todo el personal que diseña, desarrolla, prueba y despliega"
+    },
+    {
+      "question": "¿Qué genera “pérdida de confianza del cliente”?",
+      "options": [
+        "Incumplimiento regulatorio",
+        "Mejora en el rendimiento",
+        "Reducción de errores",
+        "Aumento de funcionalidades"
+      ],
+      "correct": "Incumplimiento regulatorio"
+    },
+    {
+      "question": "¿Qué NO es un impacto por incumplimiento?",
+      "options": [
+        "Riesgo reputacional",
+        "Mayor agilidad en desarrollo",
+        "Sanciones",
+        "Pérdidas patrimoniales"
+      ],
+      "correct": "Mayor agilidad en desarrollo"
+    },
+    {
+      "question": "¿Qué se menciona como origen de impactos productivos?",
+      "options": [
+        "Desconocimiento de normativas",
+        "Uso excesivo de pruebas automatizadas",
+        "Colaboración con terceros",
+        "Actualización de herramientas"
+      ],
+      "correct": "Desconocimiento de normativas"
+    },
+    {
+      "question": "¿Qué tipo de impacto incluye “retrabajos”?",
+      "options": [
+        "Improductividad",
+        "Seguridad",
+        "Regulatorio",
+        "Técnico"
+      ],
+      "correct": "Improductividad"
+    },
+    {
+      "question": "¿Qué se busca eliminar con el curso?",
+      "options": [
+        "El riesgo por desconocimiento",
+        "El uso de normativas internas",
+        "La necesidad de pruebas",
+        "La colaboración con reguladores"
+      ],
+      "correct": "El riesgo por desconocimiento"
+    },
+    {
+      "question": "¿Cuál es la función principal de la CNBV en el sector financiero mexicano?",
+      "options": [
+        "Supervisar y regular a las entidades financieras para su estabilidad y correcto funcionamiento",
+        "Definir el modelo de gobierno interno de BBVA",
+        "Clasificar la información según CIDA",
+        "Emitir regulaciones sobre ciberseguridad e infraestructura tecnológica"
+      ],
+      "correct": "Supervisar y regular a las entidades financieras para su estabilidad y correcto funcionamiento"
+    },
+    {
+      "question": "¿Qué normativa consolida disposiciones sobre riesgo operacional, tecnológico y continuidad del negocio?",
+      "options": [
+        "Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)",
+        "Circular Única de Bancos (CUB)",
+        "ISO 27001",
+        "Modelo de Gobierno de Engineering"
+      ],
+      "correct": "Circular Única de Bancos (CUB)"
+    },
+    {
+      "question": "¿Qué rol desempeña Banxico en la resiliencia del sistema financiero?",
+      "options": [
+        "Definir el ciclo de vida del desarrollo de software",
+        "Supervisar la clasificación de activos según CIDA",
+        "Emitir regulaciones sobre ciberseguridad e infraestructura tecnológica",
+        "Gestionar la identidad y acceso de usuarios"
+      ],
+      "correct": "Emitir regulaciones sobre ciberseguridad e infraestructura tecnológica"
+    },
+    {
+      "question": "¿Qué ley mexicana protege los datos personales en posesión de particulares?",
+      "options": [
+        "ISO 27001",
+        "Circular Única de Bancos (CUB)",
+        "Ley de Continuidad Operativa",
+        "Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)"
+      ],
+      "correct": "Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)"
+    },
+    {
+      "question": "¿Cuál es el objetivo principal de la regulación externa en el sector financiero?",
+      "options": [
+        "Proteger los intereses del público y garantizar la estabilidad del sistema financiero",
+        "Eliminar la necesidad de pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo de software"
+      ],
+      "correct": "Proteger los intereses del público y garantizar la estabilidad del sistema financiero"
+    },
+    {
+      "question": "¿Cuál es el organismo responsable de emitir la Circular Única de Bancos (CUB)?",
+      "options": [
+        "Instituto Nacional de Transparencia (INAI)",
+        "Comisión Nacional Bancaria y de Valores (CNBV)",
+        "Secretaría de Hacienda y Crédito Público (SHCP)",
+        "Banco de México (Banxico)"
+      ],
+      "correct": "Comisión Nacional Bancaria y de Valores (CNBV)"
+    },
+    {
+      "question": "¿Qué aspecto regula la LFPDPPP?",
+      "options": [
+        "Pruebas de resiliencia operativa digital",
+        "Clasificación de activos según CIDA",
+        "Protección de datos personales en posesión de particulares",
+        "Gestión de vulnerabilidades en sistemas críticos"
+      ],
+      "correct": "Protección de datos personales en posesión de particulares"
+    },
+    {
+      "question": "¿Por qué es importante la Circular Única de Bancos (CUB) para BBVA?",
+      "options": [
+        "Porque elimina la necesidad de pruebas funcionales",
+        "Porque define los algoritmos criptográficos permitidos",
+        "Porque regula la gestión de identidades y accesos",
+        "Porque establece disposiciones sobre riesgo tecnológico y continuidad del negocio"
+      ],
+      "correct": "Porque establece disposiciones sobre riesgo tecnológico y continuidad del negocio"
+    },
+    {
+      "question": "¿Qué organismo supervisa el cumplimiento de la LFPDPPP?",
+      "options": [
+        "Instituto Nacional de Transparencia y Acceso a la Información (INAI)",
+        "ISO",
+        "CNBV",
+        "Banxico"
+      ],
+      "correct": "Instituto Nacional de Transparencia y Acceso a la Información (INAI)"
+    },
+    {
+      "question": "¿Cuál es el objetivo de Banxico en materia tecnológica?",
+      "options": [
+        "Clasificar activos según criticidad",
+        "Garantizar la resiliencia del sistema financiero mediante regulaciones sobre ciberseguridad",
+        "Definir el ciclo de vida del desarrollo de software",
+        "Emitir políticas internas para bancos"
+      ],
+      "correct": "Garantizar la resiliencia del sistema financiero mediante regulaciones sobre ciberseguridad"
+    },
+    {
+      "question": "¿Cuál es el objetivo principal de la resiliencia operativa digital en BBVA?",
+      "options": [
+        "Reducir el tiempo de desarrollo de software",
+        "Eliminar la necesidad de cifrado",
+        "Asegurar que el banco siga funcionando ante incidentes tecnológicos",
+        "Evitar pruebas funcionales"
+      ],
+      "correct": "Asegurar que el banco siga funcionando ante incidentes tecnológicos"
+    },
+    {
+      "question": "¿Qué práctica avanzada se utiliza para probar la resiliencia de sistemas?",
+      "options": [
+        "Análisis estático de código",
+        "Pruebas unitarias",
+        "Pruebas de aceptación del usuario",
+        "Chaos Engineering"
+      ],
+      "correct": "Chaos Engineering"
+    },
+    {
+      "question": "¿Qué significa RTO en el contexto de continuidad de negocio?",
+      "options": [
+        "Tiempo Objetivo de Recuperación",
+        "Reducción Total de Operaciones",
+        "Registro Técnico Operativo",
+        "Revisión de Tareas Organizativas"
+      ],
+      "correct": "Tiempo Objetivo de Recuperación"
+    },
+    {
+      "question": "¿Qué significa RPO en el contexto de continuidad de negocio?",
+      "options": [
+        "Revisión de Planes Organizativos",
+        "Punto Objetivo de Recuperación",
+        "Reducción de Pérdida Operativa",
+        "Registro de Procesos Operativos"
+      ],
+      "correct": "Punto Objetivo de Recuperación"
+    },
+    {
+      "question": "¿Cuál es el principio fundamental de la alta disponibilidad?",
+      "options": [
+        "Ofuscación",
+        "Compresión",
+        "Redundancia",
+        "Virtualización"
+      ],
+      "correct": "Redundancia"
+    },
+    {
+      "question": "¿Qué busca la norma de continuidad de negocio?",
+      "options": [
+        "Eliminar la necesidad de cifrado",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el consumo de CPU",
+        "Asegurar la operación de procesos críticos ante desastres"
+      ],
+      "correct": "Asegurar la operación de procesos críticos ante desastres"
+    },
+    {
+      "question": "¿Qué técnica se utiliza para validar la resiliencia ante escenarios disruptivos?",
+      "options": [
+        "Pruebas basadas en escenarios de amenaza",
+        "Pruebas unitarias",
+        "Análisis de código manual",
+        "Pruebas de aceptación del usuario"
+      ],
+      "correct": "Pruebas basadas en escenarios de amenaza"
+    },
+    {
+      "question": "¿Cuál es el objetivo de las pruebas de resiliencia operativa digital?",
+      "options": [
+        "Definir roles internos en equipos de ingeniería",
+        "Validar la capacidad de resistir, responder y recuperarse ante incidentes",
+        "Reducir el tiempo de desarrollo",
+        "Eliminar la necesidad de pruebas funcionales"
+      ],
+      "correct": "Validar la capacidad de resistir, responder y recuperarse ante incidentes"
+    },
+    {
+      "question": "¿Qué componente es crítico para garantizar la continuidad del negocio?",
+      "options": [
+        "Clasificación de activos según CIDA",
+        "Pruebas unitarias automatizadas",
+        "Planes de recuperación documentados y probados",
+        "Análisis estático de código"
+      ],
+      "correct": "Planes de recuperación documentados y probados"
+    },
+    {
+      "question": "¿Qué beneficio aporta la alta disponibilidad a la resiliencia?",
+      "options": [
+        "Simplificación del modelo de gobierno",
+        "Reducción del tiempo de desarrollo",
+        "Eliminación de pruebas funcionales",
+        "Servicio ininterrumpido ante fallos comunes"
+      ],
+      "correct": "Servicio ininterrumpido ante fallos comunes"
+    },
+    {
+      "question": "¿Cuál es el objetivo principal del Modelo de Gobierno de Engineering?",
+      "options": [
+        "Establecer un marco de gobernanza para desarrollar software de forma coherente, segura y eficiente",
+        "Eliminar pruebas funcionales",
+        "Reducir el tiempo de desarrollo",
+        "Definir algoritmos criptográficos permitidos"
+      ],
+      "correct": "Establecer un marco de gobernanza para desarrollar software de forma coherente, segura y eficiente"
+    },
+    {
+      "question": "¿Qué documento actúa como la 'constitución' del área de Engineering?",
+      "options": [
+        "Checklist de Validación Técnica (CVT)",
+        "Norma del Modelo de Gobierno de Engineering",
+        "Circular Única de Bancos (CUB)",
+        "Plan de Continuidad de Negocio"
+      ],
+      "correct": "Norma del Modelo de Gobierno de Engineering"
+    },
+    {
+      "question": "¿Qué establece el Modelo de las Tres Líneas en control interno?",
+      "options": [
+        "Algoritmos criptográficos aprobados",
+        "Plan de pruebas funcionales",
+        "Roles y responsabilidades para gestionar riesgos y controles",
+        "Clasificación de activos según CIDA"
+      ],
+      "correct": "Roles y responsabilidades para gestionar riesgos y controles"
+    },
+    {
+      "question": "¿Quiénes conforman la Primera Línea en el Modelo de Tres Líneas?",
+      "options": [
+        "Proveedores externos",
+        "RCS IT (Segunda Línea)",
+        "Auditoría interna",
+        "Equipos que desarrollan y operan los servicios"
+      ],
+      "correct": "Equipos que desarrollan y operan los servicios"
+    },
+    {
+      "question": "¿Cuál es la función principal de la Segunda Línea (RCS IT)?",
+      "options": [
+        "Verificar de forma independiente la correcta ejecución de controles",
+        "Emitir regulaciones externas",
+        "Gestionar backups",
+        "Desarrollar código seguro"
+      ],
+      "correct": "Verificar de forma independiente la correcta ejecución de controles"
+    },
+    {
+      "question": "¿Qué herramienta utiliza la Primera Línea para validar controles antes del pase a producción?",
+      "options": [
+        "Plan de Continuidad",
+        "Checklist de Validación Técnica (CVT)",
+        "Acta de IAM",
+        "Informe de Auditoría"
+      ],
+      "correct": "Checklist de Validación Técnica (CVT)"
+    },
+    {
+      "question": "¿Cuál es el objetivo del CVT?",
+      "options": [
+        "Reducir el tiempo de desarrollo",
+        "Eliminar pruebas funcionales",
+        "Garantizar cumplimiento de controles técnicos y de seguridad antes del despliegue",
+        "Definir roles internos en equipos de ingeniería"
+      ],
+      "correct": "Garantizar cumplimiento de controles técnicos y de seguridad antes del despliegue"
+    },
+    {
+      "question": "¿Qué tipo de evidencias se solicitan en el CVT para pruebas funcionales?",
+      "options": [
+        "Informe de obsolescencia",
+        "Plan de marketing",
+        "Contrato con proveedor",
+        "Matriz de pruebas C204 aprobada"
+      ],
+      "correct": "Matriz de pruebas C204 aprobada"
+    },
+    {
+      "question": "¿Qué control DyD exige análisis estático de código fuente?",
+      "options": [
+        "DyD-003",
+        "DyD-001",
+        "DyD-009",
+        "DyD-007"
+      ],
+      "correct": "DyD-003"
+    },
+    {
+      "question": "¿Cuál es el propósito del Modelo de Gobierno respecto a resiliencia?",
+      "options": [
+        "Eliminar pruebas funcionales",
+        "Asignar responsabilidades claras para garantizar controles coordinados",
+        "Definir algoritmos criptográficos permitidos",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Asignar responsabilidades claras para garantizar controles coordinados"
+    },
+    {
+      "question": "¿Cuál es el principio fundamental en la gestión de identidades y accesos (IAM)?",
+      "options": [
+        "Autenticación opcional",
+        "Acceso total por defecto",
+        "Principio de mínimo privilegio",
+        "Privilegios heredados"
+      ],
+      "correct": "Principio de mínimo privilegio"
+    },
+    {
+      "question": "¿Qué control previene que una sola persona complete una operación crítica?",
+      "options": [
+        "Autenticación multifactor",
+        "Hardening",
+        "Tokenización",
+        "Segregación de funciones"
+      ],
+      "correct": "Segregación de funciones"
+    },
+    {
+      "question": "¿Cuál es el objetivo principal de la norma de criptografía?",
+      "options": [
+        "Asegurar la confidencialidad e integridad de los datos en tránsito y reposo",
+        "Reducir el tiempo de desarrollo",
+        "Eliminar pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería"
+      ],
+      "correct": "Asegurar la confidencialidad e integridad de los datos en tránsito y reposo"
+    },
+    {
+      "question": "¿Qué algoritmo de cifrado está aprobado por la norma de criptografía?",
+      "options": [
+        "DES",
+        "AES-256",
+        "ROT13",
+        "MD5"
+      ],
+      "correct": "AES-256"
+    },
+    {
+      "question": "¿Qué práctica está prohibida en la gestión criptográfica?",
+      "options": [
+        "Rotar claves periódicamente",
+        "Usar librerías corporativas aprobadas",
+        "Crear implementaciones criptográficas personalizadas",
+        "Integrar con el sistema central de gestión de claves"
+      ],
+      "correct": "Crear implementaciones criptográficas personalizadas"
+    },
+    {
+      "question": "¿Cuál es el objetivo de la norma de Hardening?",
+      "options": [
+        "Optimizar el rendimiento de CPU",
+        "Eliminar redundancia en backups",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir la superficie de ataque mediante configuraciones seguras"
+      ],
+      "correct": "Reducir la superficie de ataque mediante configuraciones seguras"
+    },
+    {
+      "question": "¿Qué herramienta centraliza los logs para análisis de seguridad?",
+      "options": [
+        "SIEM",
+        "TLS",
+        "LDAP",
+        "VPN"
+      ],
+      "correct": "SIEM"
+    },
+    {
+      "question": "¿Cuál es el objetivo de la monitorización de seguridad?",
+      "options": [
+        "Definir roles internos en equipos de ingeniería",
+        "Detectar actividades maliciosas mediante registro y análisis centralizado",
+        "Eliminar pruebas funcionales",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Detectar actividades maliciosas mediante registro y análisis centralizado"
+    },
+    {
+      "question": "¿Qué significa SAST en el contexto de seguridad del SDLC?",
+      "options": [
+        "Secure API Stress Test",
+        "Security Analysis Systematic Test",
+        "Static Application Security Testing",
+        "Software Audit Security Tool"
+      ],
+      "correct": "Static Application Security Testing"
+    },
+    {
+      "question": "¿Cuál es el objetivo de la norma de gestión de vulnerabilidades?",
+      "options": [
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo",
+        "Eliminar pruebas funcionales",
+        "Encontrar, evaluar y remediar vulnerabilidades antes de que sean explotadas"
+      ],
+      "correct": "Encontrar, evaluar y remediar vulnerabilidades antes de que sean explotadas"
+    },
+    {
+      "question": "¿Qué herramientas se mencionan para identificar vulnerabilidades?",
+      "options": [
+        "SAST, DAST, SCA",
+        "Excel y Word",
+        "Ping y Traceroute",
+        "FTP y Telnet"
+      ],
+      "correct": "SAST, DAST, SCA"
+    },
+    {
+      "question": "¿Cuál es el beneficio de la rotación periódica de claves criptográficas?",
+      "options": [
+        "Simplificar el modelo de gobierno",
+        "Reducir el riesgo de compromiso de datos",
+        "Eliminar pruebas funcionales",
+        "Optimizar el rendimiento del sistema"
+      ],
+      "correct": "Reducir el riesgo de compromiso de datos"
+    },
+    {
+      "question": "¿Qué principio aplica la norma de IAM para accesos?",
+      "options": [
+        "Permitir acceso total por defecto",
+        "Privilegios heredados",
+        "Denegar por defecto y otorgar solo lo necesario",
+        "Autenticación opcional"
+      ],
+      "correct": "Denegar por defecto y otorgar solo lo necesario"
+    },
+    {
+      "question": "¿Cuál es el objetivo de la monitorización proactiva?",
+      "options": [
+        "Definir roles internos en equipos de ingeniería",
+        "Eliminar pruebas funcionales",
+        "Reducir el tiempo de desarrollo",
+        "Detectar problemas antes de que se conviertan en incidentes"
+      ],
+      "correct": "Detectar problemas antes de que se conviertan en incidentes"
+    },
+    {
+      "question": "¿Qué norma establece la obligación de registrar eventos clave como intentos de login?",
+      "options": [
+        "Norma de Monitorización de Seguridad",
+        "Norma de Hardening",
+        "Norma de Testing",
+        "Norma de IAM"
+      ],
+      "correct": "Norma de Monitorización de Seguridad"
+    },
+    {
+      "question": "¿Cuál es el objetivo principal de la norma de SDLC en BBVA?",
+      "options": [
+        "Reducir el tiempo de desarrollo",
+        "Definir un marco metodológico coherente para todas las fases del desarrollo",
+        "Eliminar pruebas funcionales",
+        "Definir algoritmos criptográficos permitidos"
+      ],
+      "correct": "Definir un marco metodológico coherente para todas las fases del desarrollo"
+    },
+    {
+      "question": "¿Qué busca la norma de Testing en el ciclo de vida del software?",
+      "options": [
+        "Eliminar la necesidad de cifrado",
+        "Reducir el tiempo de desarrollo",
+        "Asegurar la calidad del software mediante pruebas estructuradas",
+        "Definir roles internos en equipos de ingeniería"
+      ],
+      "correct": "Asegurar la calidad del software mediante pruebas estructuradas"
+    },
+    {
+      "question": "¿Qué tipo de pruebas son responsabilidad directa del desarrollador?",
+      "options": [
+        "Pruebas de hacking ético",
+        "Pruebas de resiliencia",
+        "Pruebas de aceptación del usuario",
+        "Pruebas unitarias"
+      ],
+      "correct": "Pruebas unitarias"
+    },
+    {
+      "question": "¿Qué documento debe existir para planificar las pruebas en un proyecto?",
+      "options": [
+        "Plan de Pruebas",
+        "Acta de IAM",
+        "Informe de Auditoría",
+        "Checklist CVT"
+      ],
+      "correct": "Plan de Pruebas"
+    },
+    {
+      "question": "¿Por qué es importante la automatización de pruebas según la norma?",
+      "options": [
+        "Simplifica la clasificación CIDA",
+        "Reduce errores humanos y permite validación continua",
+        "Reduce el tiempo de auditoría externa",
+        "Elimina la necesidad de cifrado"
+      ],
+      "correct": "Reduce errores humanos y permite validación continua"
+    },
+    {
+      "question": "¿Qué tipo de pruebas se realizan para validar la integración entre componentes?",
+      "options": [
+        "Pruebas de resiliencia",
+        "Pruebas de aceptación del usuario",
+        "Pruebas de integración",
+        "Pruebas unitarias"
+      ],
+      "correct": "Pruebas de integración"
+    },
+    {
+      "question": "¿Qué norma impulsa la inclusión de pruebas automatizadas en el pipeline CI/CD?",
+      "options": [
+        "Norma de Hardening",
+        "Norma de IAM",
+        "Norma de Criptografía",
+        "Norma de Testing"
+      ],
+      "correct": "Norma de Testing"
+    },
+    {
+      "question": "¿Qué evidencia se solicita para validar pruebas funcionales en el CVT?",
+      "options": [
+        "Matriz de pruebas C204 aprobada",
+        "Contrato con proveedor",
+        "Plan de marketing",
+        "Informe de obsolescencia"
+      ],
+      "correct": "Matriz de pruebas C204 aprobada"
+    },
+    {
+      "question": "¿Qué busca el enfoque 'Shift Left' en seguridad del SDLC?",
+      "options": [
+        "Eliminar pruebas funcionales",
+        "Integrar la seguridad desde las fases tempranas del desarrollo",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Integrar la seguridad desde las fases tempranas del desarrollo"
+    },
+    {
+      "question": "¿Qué norma exige la integración de controles transversales en el SDLC?",
+      "options": [
+        "Norma de IAM",
+        "Norma de Hardening",
+        "Norma de Ciclo de Vida Productivo",
+        "Norma de Criptografía"
+      ],
+      "correct": "Norma de Ciclo de Vida Productivo"
+    },
+    {
+      "question": "¿Qué significa el acrónimo CIDA en la clasificación de activos?",
+      "options": [
+        "Control, Integración, Datos y Auditoría",
+        "Capacidad, Innovación, Datos y Arquitectura",
+        "Confianza, Identidad, Datos y Autorización",
+        "Confidencialidad, Integridad, Disponibilidad y Autenticidad"
+      ],
+      "correct": "Confidencialidad, Integridad, Disponibilidad y Autenticidad"
+    },
+    {
+      "question": "¿Cuál es el primer paso en el tratamiento seguro de la información?",
+      "options": [
+        "Clasificar la información según su nivel de sensibilidad",
+        "Eliminar datos obsoletos",
+        "Aplicar cifrado en tránsito",
+        "Definir roles internos en equipos de ingeniería"
+      ],
+      "correct": "Clasificar la información según su nivel de sensibilidad"
+    },
+    {
+      "question": "¿Qué estados de la información deben protegerse según la normativa?",
+      "options": [
+        "Solo en uso",
+        "En tránsito, en reposo y en uso",
+        "Solo en reposo",
+        "Solo en tránsito"
+      ],
+      "correct": "En tránsito, en reposo y en uso"
+    },
+    {
+      "question": "¿Qué técnica permite usar datos sensibles en pruebas sin exponer la información real?",
+      "options": [
+        "Virtualización",
+        "Ofuscación",
+        "Tokenización",
+        "Compresión"
+      ],
+      "correct": "Tokenización"
+    },
+    {
+      "question": "¿Qué principio busca la norma de tratamiento de información según confidencialidad?",
+      "options": [
+        "Eliminar pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo",
+        "Evitar acceso, divulgación o manipulación no autorizada"
+      ],
+      "correct": "Evitar acceso, divulgación o manipulación no autorizada"
+    },
+    {
+      "question": "¿Qué mecanismo se utiliza para garantizar la integridad de los datos?",
+      "options": [
+        "Funciones de hash y firmas digitales",
+        "Virtualización",
+        "Compresión de datos",
+        "Ofuscación"
+      ],
+      "correct": "Funciones de hash y firmas digitales"
+    },
+    {
+      "question": "¿Qué debe incluir la pista de auditoría para cambios en datos críticos?",
+      "options": [
+        "Solo la fecha del cambio",
+        "Quién hizo el cambio, qué cambió y cuándo",
+        "Solo el tipo de dato modificado",
+        "Solo el nombre del usuario"
+      ],
+      "correct": "Quién hizo el cambio, qué cambió y cuándo"
+    },
+    {
+      "question": "¿Por qué es importante la clasificación CIDA para la resiliencia?",
+      "options": [
+        "Elimina pruebas funcionales",
+        "Simplifica la arquitectura",
+        "Permite aplicar controles proporcionales al nivel de criticidad",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Permite aplicar controles proporcionales al nivel de criticidad"
+    },
+    {
+      "question": "¿Qué técnica complementa la tokenización para proteger datos sensibles?",
+      "options": [
+        "Compresión",
+        "Virtualización",
+        "Ofuscación",
+        "Pseudonimización"
+      ],
+      "correct": "Pseudonimización"
+    },
+    {
+      "question": "¿Qué riesgo se mitiga con la destrucción segura de información?",
+      "options": [
+        "Fuga de datos confidenciales",
+        "Incremento de costos operativos",
+        "Errores en pruebas funcionales",
+        "Reducción de redundancia"
+      ],
+      "correct": "Fuga de datos confidenciales"
+    },
+    {
+      "question": "¿Cuál es el objetivo principal de la norma de gestión del riesgo TIC de terceros?",
+      "options": [
+        "Definir roles internos en equipos de ingeniería",
+        "Asegurar que la contratación de proveedores se base en un análisis completo de riesgos",
+        "Reducir el tiempo de desarrollo",
+        "Eliminar pruebas funcionales"
+      ],
+      "correct": "Asegurar que la contratación de proveedores se base en un análisis completo de riesgos"
+    },
+    {
+      "question": "¿Qué implica el proceso de Due Diligence para proveedores?",
+      "options": [
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo",
+        "Evaluar capacidades técnicas, financieras y controles de seguridad antes de contratar",
+        "Eliminar pruebas funcionales"
+      ],
+      "correct": "Evaluar capacidades técnicas, financieras y controles de seguridad antes de contratar"
+    },
+    {
+      "question": "¿Qué factor se considera en la clasificación del riesgo del servicio de un proveedor?",
+      "options": [
+        "Número de empleados del proveedor",
+        "Ubicación geográfica del proveedor",
+        "Costo del servicio",
+        "Criticidad del servicio y tipo de datos a los que accederá"
+      ],
+      "correct": "Criticidad del servicio y tipo de datos a los que accederá"
+    },
+    {
+      "question": "¿Qué documento valida que un proveedor ha superado el proceso de homologación?",
+      "options": [
+        "Informe de Due Diligence",
+        "Plan de Continuidad",
+        "Checklist CVT",
+        "Acta de IAM"
+      ],
+      "correct": "Informe de Due Diligence"
+    },
+    {
+      "question": "¿Qué norma establece la supervisión continua de proveedores de TI?",
+      "options": [
+        "Norma de Hardening",
+        "Norma de Gestión del Ciclo de Vida de Servicios Prestados por Terceros",
+        "Norma de IAM",
+        "Norma de Testing"
+      ],
+      "correct": "Norma de Gestión del Ciclo de Vida de Servicios Prestados por Terceros"
+    },
+    {
+      "question": "¿Qué aspecto se monitorea en la supervisión continua de proveedores?",
+      "options": [
+        "Costo del servicio",
+        "Ubicación geográfica del proveedor",
+        "Cumplimiento de SLAs y postura de seguridad",
+        "Número de empleados del proveedor"
+      ],
+      "correct": "Cumplimiento de SLAs y postura de seguridad"
+    },
+    {
+      "question": "¿Qué acción debe realizar el proveedor en caso de sufrir un incidente de seguridad?",
+      "options": [
+        "Eliminar pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo",
+        "Notificar a BBVA según el protocolo definido"
+      ],
+      "correct": "Notificar a BBVA según el protocolo definido"
+    },
+    {
+      "question": "¿Por qué es importante la gestión del riesgo de terceros para la resiliencia?",
+      "options": [
+        "Previene incidentes originados en la cadena de suministro",
+        "Elimina pruebas funcionales",
+        "Reducir el tiempo de desarrollo",
+        "Simplifica la arquitectura"
+      ],
+      "correct": "Previene incidentes originados en la cadena de suministro"
+    },
+    {
+      "question": "¿Qué técnica puede aplicarse para evaluar la seguridad de un proveedor crítico?",
+      "options": [
+        "Virtualización",
+        "Auditorías in situ o pruebas de hacking ético",
+        "Compresión de datos",
+        "Ofuscación"
+      ],
+      "correct": "Auditorías in situ o pruebas de hacking ético"
+    },
+    {
+      "question": "¿Qué riesgo se mitiga al realizar revisiones periódicas de seguridad a proveedores?",
+      "options": [
+        "Incremento de costos operativos",
+        "Errores en pruebas funcionales",
+        "Incremento de vulnerabilidades en servicios externos",
+        "Reducción de redundancia"
+      ],
+      "correct": "Incremento de vulnerabilidades en servicios externos"
+    },
+    {
+      "question": "¿Qué ventaja aporta la automatización de runbooks en la operación TI?",
+      "options": [
+        "Reduce errores humanos y acelera la recuperación",
+        "Eliminar pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Reduce errores humanos y acelera la recuperación"
+    },
+    {
+      "question": "¿Qué significa MTTR en la gestión de incidencias?",
+      "options": [
+        "Tiempo máximo de respuesta",
+        "Tiempo medio de recuperación",
+        "Tiempo mínimo de reacción",
+        "Tiempo medio de riesgo"
+      ],
+      "correct": "Tiempo medio de recuperación"
+    },
+    {
+      "question": "¿Qué significa MTTD en monitorización proactiva?",
+      "options": [
+        "Tiempo medio de desarrollo",
+        "Tiempo medio de detección",
+        "Tiempo máximo de despliegue",
+        "Tiempo mínimo de diagnóstico"
+      ],
+      "correct": "Tiempo medio de detección"
+    },
+    {
+      "question": "¿Cuál es el objetivo del análisis post-mortem en la gestión de incidencias?",
+      "options": [
+        "Eliminar pruebas funcionales",
+        "Reducir el tiempo de desarrollo",
+        "Identificar la causa raíz y prevenir recurrencias",
+        "Definir roles internos en equipos de ingeniería"
+      ],
+      "correct": "Identificar la causa raíz y prevenir recurrencias"
+    },
+    {
+      "question": "¿Qué práctica avanzada valida la resiliencia ante fallos aleatorios?",
+      "options": [
+        "Pruebas unitarias",
+        "Chaos Engineering",
+        "Pruebas de aceptación",
+        "Pruebas funcionales"
+      ],
+      "correct": "Chaos Engineering"
+    },
+    {
+      "question": "¿Qué beneficio aporta la segmentación de red en resiliencia?",
+      "options": [
+        "Contener amenazas y limitar movimientos laterales",
+        "Eliminar pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Contener amenazas y limitar movimientos laterales"
+    },
+    {
+      "question": "¿Qué control evita que un solo usuario complete una operación crítica?",
+      "options": [
+        "Autenticación multifactor",
+        "Segregación de funciones",
+        "Tokenización",
+        "Hardening"
+      ],
+      "correct": "Segregación de funciones"
+    },
+    {
+      "question": "¿Cuál es el objetivo del modelo de resiliencia cultural?",
+      "options": [
+        "Eliminar pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería",
+        "Fomentar conciencia de riesgo y responsabilidad compartida",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Fomentar conciencia de riesgo y responsabilidad compartida"
+    },
+    {
+      "question": "¿Qué documento describe los pasos para recuperar un servicio en DRP?",
+      "options": [
+        "Runbook de recuperación",
+        "Checklist CVT",
+        "Plan de pruebas",
+        "Informe de auditoría"
+      ],
+      "correct": "Runbook de recuperación"
+    },
+    {
+      "question": "¿Qué técnica permite validar la capacidad de respuesta ante ransomware?",
+      "options": [
+        "Pruebas de restauración de backups",
+        "Pruebas unitarias",
+        "Pruebas de aceptación",
+        "Pruebas funcionales"
+      ],
+      "correct": "Pruebas de restauración de backups"
+    },
+    {
+      "question": "¿Qué principio aplica la norma de seguridad física para centros de datos?",
+      "options": [
+        "Definir roles internos en equipos de ingeniería",
+        "Eliminar pruebas funcionales",
+        "Control de acceso basado en mínimo privilegio",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Control de acceso basado en mínimo privilegio"
+    },
+    {
+      "question": "¿Qué ventaja aporta la pseudonimización frente a la tokenización?",
+      "options": [
+        "Permite análisis sin exponer identidades reales",
+        "Eliminar pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Permite análisis sin exponer identidades reales"
+    },
+    {
+      "question": "¿Qué norma exige pruebas de carga para validar escalabilidad?",
+      "options": [
+        "Norma de Testing",
+        "Norma de IAM",
+        "Norma de Hardening",
+        "Norma de Monitorización TI"
+      ],
+      "correct": "Norma de Testing"
+    },
+    {
+      "question": "¿Qué beneficio aporta la clasificación de criticidad en CMDB?",
+      "options": [
+        "Priorizar controles y recursos según impacto",
+        "Eliminar pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Priorizar controles y recursos según impacto"
+    },
+    {
+      "question": "¿Qué práctica reduce el riesgo de errores en despliegues manuales?",
+      "options": [
+        "Automatización de pipelines CI/CD",
+        "Pruebas unitarias",
+        "Tokenización",
+        "Hardening"
+      ],
+      "correct": "Automatización de pipelines CI/CD"
+    },
+    {
+      "question": "¿Qué norma establece la obligación de monitorear SLAs de proveedores?",
+      "options": [
+        "Norma de Gestión del Ciclo de Vida de Servicios Prestados por Terceros",
+        "Norma de Testing",
+        "Norma de IAM",
+        "Norma de Hardening"
+      ],
+      "correct": "Norma de Gestión del Ciclo de Vida de Servicios Prestados por Terceros"
+    },
+    {
+      "question": "¿Qué ventaja aporta la rotación periódica de claves criptográficas?",
+      "options": [
+        "Eliminar pruebas funcionales",
+        "Reducir el riesgo de compromiso de datos",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Reducir el riesgo de compromiso de datos"
+    },
+    {
+      "question": "¿Qué norma exige la definición de métricas para capacidad TI?",
+      "options": [
+        "Norma de Capacidad TI",
+        "Norma de Testing",
+        "Norma de IAM",
+        "Norma de Hardening"
+      ],
+      "correct": "Norma de Capacidad TI"
+    },
+    {
+      "question": "¿Qué práctica permite detectar vulnerabilidades en librerías externas?",
+      "options": [
+        "Análisis SCA",
+        "Pruebas unitarias",
+        "Tokenización",
+        "Hardening"
+      ],
+      "correct": "Análisis SCA"
+    },
+    {
+      "question": "¿Qué norma establece la obligación de registrar intentos fallidos de login?",
+      "options": [
+        "Norma de Monitorización de Seguridad",
+        "Norma de Testing",
+        "Norma de IAM",
+        "Norma de Hardening"
+      ],
+      "correct": "Norma de Monitorización de Seguridad"
+    },
+    {
+      "question": "¿Qué ventaja aporta la alta disponibilidad en resiliencia?",
+      "options": [
+        "Servicio ininterrumpido ante fallos comunes",
+        "Eliminar pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería",
+        "Reducir el tiempo de desarrollo"
+      ],
+      "correct": "Servicio ininterrumpido ante fallos comunes"
+    },
+    {
+      "question": "¿Qué norma exige la integración de controles transversales en SDLC?",
+      "options": [
+        "Norma de Ciclo de Vida Productivo",
+        "Norma de Testing",
+        "Norma de IAM",
+        "Norma de Hardening"
+      ],
+      "correct": "Norma de Ciclo de Vida Productivo"
+    },
+    {
+      "question": "¿Qué práctica permite validar la resiliencia ante caída de un proveedor cloud?",
+      "options": [
+        "Pruebas basadas en escenarios de amenaza",
+        "Pruebas unitarias",
+        "Pruebas funcionales",
+        "Pruebas de aceptación"
+      ],
+      "correct": "Pruebas basadas en escenarios de amenaza"
+    },
+    {
+      "question": "¿Qué norma establece la obligación de documentar dependencias críticas?",
+      "options": [
+        "Norma de Gestión de Activos TI",
+        "Norma de Testing",
+        "Norma de IAM",
+        "Norma de Hardening"
+      ],
+      "correct": "Norma de Gestión de Activos TI"
+    },
+    {
+      "question": "¿Qué ventaja aporta el enfoque 'Shift Left' en pruebas de resiliencia?",
+      "options": [
+        "Detectar y corregir fallos en etapas tempranas del desarrollo",
+        "Reducir el tiempo de desarrollo",
+        "Eliminar pruebas funcionales",
+        "Definir roles internos en equipos de ingeniería"
+      ],
+      "correct": "Detectar y corregir fallos en etapas tempranas del desarrollo"
+    },
+    {
+      "question": "¿Qué beneficio menciona la Norma del Modelo de Gobierno para el desarrollador?",
+      "options": [
+        "Saber exactamente qué área acudir para consultas de seguridad o arquitectura",
+        "Evitar reuniones con RCS",
+        "Desarrollar sin normativas",
+        "Aprobar despliegues automáticamente"
+      ],
+      "correct": "Saber exactamente qué área acudir para consultas de seguridad o arquitectura"
+    },
+    {
+      "question": "¿Qué legitima la creación de todas las demás normas?",
+      "options": [
+        "Norma de SDLC",
+        "Norma del Modelo de Gobierno de Engineering",
+        "CUB",
+        "LFPDPPP"
+      ],
+      "correct": "Norma del Modelo de Gobierno de Engineering"
+    },
+    {
+      "question": "¿Qué norma trata sobre 'cómo elegir a nuestros socios' en el ciclo de vida de servicios de terceros?",
+      "options": [
+        "Norma de SDLC",
+        "Norma de Gestión del Ciclo de Vida de Servicios Prestados por Terceros",
+        "Norma de Seguridad",
+        "Norma de Continuidad"
+      ],
+      "correct": "Norma de Gestión del Ciclo de Vida de Servicios Prestados por Terceros"
+    },
+    {
+      "question": "¿Qué debe monitorearse continuamente en los proveedores según la norma de ciclo de vida?",
+      "options": [
+        "Solo el costo",
+        "Cumplimiento de SLAs y desempeño",
+        "Solo la marca",
+        "Solo la ubicación"
+      ],
+      "correct": "Cumplimiento de SLAs y desempeño"
+    },
+    {
+      "question": "¿Qué debe hacer el proveedor en revisiones de seguridad según la norma de terceros?",
+      "options": [
+        "Negarse",
+        "Someterse a revisiones periódicas",
+        "Solo enviar reportes",
+        "Solo firmar un acuerdo"
+      ],
+      "correct": "Someterse a revisiones periódicas"
+    },
+    {
+      "question": "¿Qué es y Por qué es tan importante el CVT?",
+      "options": [
+        "Un procedimiento formal que garantiza el cumplimiento de los controles mínimos aplicables al desarrollo de sistemas antes de una instalación en producción",
+        "Un control de acceso",
+        "Un plan de pruebas",
+        "Un informe de auditoría"
+      ],
+      "correct": "Un procedimiento formal que garantiza el cumplimiento de los controles mínimos aplicables al desarrollo de sistemas antes de una instalación en producción"
+    },
+    {
+      "question": "¿Qué es el Proceso del CVT en Acción?",
+      "options": [
+        "El procedimiento del CVT está integrado en el flujo de gestión de cambios (CRQ - Change Request)",
+        "Un proceso separado",
+        "Un proceso manual",
+        "Un proceso opcional"
+      ],
+      "correct": "El procedimiento del CVT está integrado en el flujo de gestión de cambios (CRQ - Change Request)"
+    },
+    {
+      "question": "¿Qué es el Responsable del CVT?",
+      "options": [
+        "El Change Lead de la instalación",
+        "El Product Owner",
+        "El Tech Lead",
+        "El Auditor"
+      ],
+      "correct": "El Change Lead de la instalación"
+    },
+    {
+      "question": "¿Qué es la Herramienta del CVT?",
+      "options": [
+        "El Formulario CVT y el Expediente Técnico",
+        "El Plan de Pruebas",
+        "El Reporte de SAST",
+        "El Acta de IAM"
+      ],
+      "correct": "El Formulario CVT y el Expediente Técnico"
+    },
+    {
+      "question": "¿Qué controles clave se validan en el CVT?",
+      "options": [
+        "Documentación de Diseño, Pruebas Funcionales, Pruebas de Seguridad, Aprobaciones Formales, Plan de Puesta en Producción y Plan de Rollback",
+        "Solo Pruebas Unitarias",
+        "Solo Pruebas de Integración",
+        "Solo Pruebas de Carga"
+      ],
+      "correct": "Documentación de Diseño, Pruebas Funcionales, Pruebas de Seguridad, Aprobaciones Formales, Plan de Puesta en Producción y Plan de Rollback"
+    },
+    {
+      "question": "¿Qué es la Revisión y el Cierre del CVT?",
+      "options": [
+        "Una vez completado el CVT y adjuntadas todas las evidencias, este es revisado por los responsables designados",
+        "Una revisión opcional",
+        "Una revisión anual",
+        "Una revisión externa"
+      ],
+      "correct": "Una vez completado el CVT y adjuntadas todas las evidencias, este es revisado por los responsables designados"
+    },
+    {
+      "question": "¿Qué es el Expediente Técnico del CVT?",
+      "options": [
+        "La colección de evidencias que demuestran el cumplimiento de los controles",
+        "Un plan de pruebas",
+        "Un informe de auditoría",
+        "Un contrato con proveedor"
+      ],
+      "correct": "La colección de evidencias que demuestran el cumplimiento de los controles"
+    },
+    {
+      "question": "¿Qué es el DyD-001?",
+      "options": [
+        "Definición Funcional y técnica",
+        "Análisis estático de código fuente",
+        "Pruebas de seguridad aplicativa",
+        "Pruebas de rendimiento"
+      ],
+      "correct": "Definición Funcional y técnica"
+    },
+    {
+      "question": "¿Qué es el DyD-003?",
+      "options": [
+        "Análisis estático de código fuente",
+        "Definición Funcional y técnica",
+        "Pruebas de seguridad aplicativa",
+        "Pruebas de rendimiento"
+      ],
+      "correct": "Análisis estático de código fuente"
+    },
+    {
+      "question": "¿Qué es el DyD-004?",
+      "options": [
+        "Pruebas de seguridad aplicativa",
+        "Análisis estático de código fuente",
+        "Definición Funcional y técnica",
+        "Pruebas de rendimiento"
+      ],
+      "correct": "Pruebas de seguridad aplicativa"
+    },
+    {
+      "question": "¿Qué es el DyD-006?",
+      "options": [
+        "Pruebas funcionales y técnicas (previas)",
+        "Pruebas de seguridad aplicativa",
+        "Análisis estático de código fuente",
+        "Definición Funcional y técnica"
+      ],
+      "correct": "Pruebas funcionales y técnicas (previas)"
+    },
+    {
+      "question": "¿Qué es el DyD-007?",
+      "options": [
+        "Pruebas de rendimiento",
+        "Pruebas funcionales y técnicas (previas)",
+        "Pruebas de seguridad aplicativa",
+        "Análisis estático de código fuente"
+      ],
+      "correct": "Pruebas de rendimiento"
+    },
+    {
+      "question": "¿Qué es el DyD-008?",
+      "options": [
+        "Pruebas funcionales y técnicas (posteriores)",
+        "Pruebas de rendimiento",
+        "Pruebas funcionales y técnicas (previas)",
+        "Pruebas de seguridad aplicativa"
+      ],
+      "correct": "Pruebas funcionales y técnicas (posteriores)"
+    },
+    {
+      "question": "¿Qué es el PRO-01?",
+      "options": [
+        "Gestión del cambio cada fase",
+        "Pruebas funcionales y técnicas (posteriores)",
+        "Pruebas de rendimiento",
+        "Pruebas funcionales y técnicas (previas)"
+      ],
+      "correct": "Gestión del cambio cada fase"
+    },
+    {
+      "question": "¿Qué es el PRO-02?",
+      "options": [
+        "Ready for operation",
+        "Gestión del cambio cada fase",
+        "Pruebas funcionales y técnicas (posteriores)",
+        "Pruebas de rendimiento"
+      ],
+      "correct": "Ready for operation"
+    },
+    {
+      "question": "¿Qué es el SEG-01?",
+      "options": [
+        "Perfilado de usuario delegado IAM",
+        "Ready for operation",
+        "Gestión del cambio cada fase",
+        "Pruebas funcionales y técnicas (posteriores)"
+      ],
+      "correct": "Perfilado de usuario delegado IAM"
+    },
+    {
+      "question": "¿Qué es el SEG-02?",
+      "options": [
+        "Creación o modificación de transacciones/perfiles IAM",
+        "Perfilado de usuario delegado IAM",
+        "Ready for operation",
+        "Gestión del cambio cada fase"
+      ],
+      "correct": "Creación o modificación de transacciones/perfiles IAM"
+    },
+    {
+      "question": "¿Qué es el FRA-01?",
+      "options": [
+        "Monitorización del fraude",
+        "Creación o modificación de transacciones/perfiles IAM",
+        "Perfilado de usuario delegado IAM",
+        "Ready for operation"
+      ],
+      "correct": "Monitorización del fraude"
+    },
+    {
+      "question": "¿Qué es el DMA-01?",
+      "options": [
+        "Boletín Demand Management I&O",
+        "Monitorización del fraude",
+        "Creación o modificación de transacciones/perfiles IAM",
+        "Perfilado de usuario delegado IAM"
+      ],
+      "correct": "Boletín Demand Management I&O"
+    },
+    {
+      "question": "¿Qué es el PRO-03?",
+      "options": [
+        "Gestión de respaldos",
+        "Boletín Demand Management I&O",
+        "Monitorización del fraude",
+        "Creación o modificación de transacciones/perfiles IAM"
+      ],
+      "correct": "Gestión de respaldos"
+    },
+    {
+      "question": "¿Qué es el DyD-09?",
+      "options": [
+        "Consentimiento de uso de datos reales en previos",
+        "Gestión de respaldos",
+        "Boletín Demand Management I&O",
+        "Monitorización del fraude"
+      ],
+      "correct": "Consentimiento de uso de datos reales en previos"
+    },
+    {
+      "question": "¿Qué es el Modelo de las Tres Líneas?",
+      "options": [
+        "Un marco de control interno para gestionar riesgos y controles",
+        "Un modelo de desarrollo de software",
+        "Un modelo de clasificación de datos",
+        "Un modelo de pruebas funcionales"
+      ],
+      "correct": "Un marco de control interno para gestionar riesgos y controles"
+    },
+    {
+      "question": "¿Qué es la Primera Línea?",
+      "options": [
+        "Los equipos de desarrollo, los Tech Leads, los Product Owners",
+        "RCS IT",
+        "Auditoría Interna",
+        "Proveedores externos"
+      ],
+      "correct": "Los equipos de desarrollo, los Tech Leads, los Product Owners"
+    },
+    {
+      "question": "¿Qué es la Segunda Línea?",
+      "options": [
+        "RCS IT",
+        "Los equipos de desarrollo",
+        "Auditoría Interna",
+        "Proveedores externos"
+      ],
+      "correct": "RCS IT"
+    },
+    {
+      "question": "¿Qué es la Tercera Línea?",
+      "options": [
+        "Auditoría Interna",
+        "RCS IT",
+        "Los equipos de desarrollo",
+        "Proveedores externos"
+      ],
+      "correct": "Auditoría Interna"
+    },
+    {
+      "question": "¿Qué es un Gap?",
+      "options": [
+        "Una desviación documentada entre lo que la norma exige y lo que se está haciendo en la práctica",
+        "Una evidencia correcta",
+        "Un plan de acción",
+        "Un control clave"
+      ],
+      "correct": "Una desviación documentada entre lo que la norma exige y lo que se está haciendo en la práctica"
+    },
+    {
+      "question": "¿Qué es el Proceso de Testing de Controles?",
+      "options": [
+        "Planificación y Alcance, Identificación de Controles Clave, Pruebas de Diseño, Pruebas de Eficacia Operativa",
+        "Solo Pruebas de Diseño",
+        "Solo Pruebas de Eficacia Operativa",
+        "Solo Planificación y Alcance"
+      ],
+      "correct": "Planificación y Alcance, Identificación de Controles Clave, Pruebas de Diseño, Pruebas de Eficacia Operativa"
+    }
+  ]
+}

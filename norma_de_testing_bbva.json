@@ -1,0 +1,1005 @@
+{
+  "title": "Norma de Testing BBVA",
+  "questions": [
+    {
+      "question": "¿Cuál es el título oficial del curso según la página 1 del documento?",
+      "options": [
+        "Norma de Testing BBVA: de la teoría a la práctica",
+        "Ciclo de Vida Seguro BBVA",
+        "Calidad en el Desarrollo de Software",
+        "Testing Ágil en BBVA"
+      ],
+      "correct": "Norma de Testing BBVA: de la teoría a la práctica"
+    },
+    {
+      "question": "¿Quiénes son el público objetivo del curso según el documento oficial?",
+      "options": [
+        "Equipos de desarrollo, Quality Coach (QC), App Owners, Release Managers, Change Leads, Service Owner y cualquier rol involucrado en el ciclo de vida del desarrollo de software en BBVA",
+        "Solo desarrolladores backend",
+        "Solo auditores externos",
+        "Solo gerencia de TI"
+      ],
+      "correct": "Equipos de desarrollo, Quality Coach (QC), App Owners, Release Managers, Change Leads, Service Owner y cualquier rol involucrado en el ciclo de vida del desarrollo de software en BBVA"
+    },
+    {
+      "question": "¿Cuál es el objetivo general del curso según el documento oficial?",
+      "options": [
+        "Comprender y aplicar los principios y directrices de la Norma de Testing de BBVA para asegurar la calidad, seguridad y cumplimiento normativo del software desarrollado en el Grupo",
+        "Eliminar por completo los defectos",
+        "Reducir tiempos de despliegue",
+        "Aprender a programar en microservicios"
+      ],
+      "correct": "Comprender y aplicar los principios y directrices de la Norma de Testing de BBVA para asegurar la calidad, seguridad y cumplimiento normativo del software desarrollado en el Grupo"
+    },
+    {
+      "question": "Según el módulo 1.1, ¿por qué es necesario el testing?",
+      "options": [
+        "Porque la creación del software es un proceso esencialmente humano y, por lo tanto, propenso a errores",
+        "Porque los desarrolladores no cometen errores",
+        "Solo por regulaciones externas",
+        "Para acelerar los lanzamientos"
+      ],
+      "correct": "Porque la creación del software es un proceso esencialmente humano y, por lo tanto, propenso a errores"
+    },
+    {
+      "question": "Según el módulo 1.1, ¿qué riesgo asume el creador del software al disponibilizarlo?",
+      "options": [
+        "Riesgo reputacional si el software falla, o su riesgo económico si los usuarios no terminan usando el software porque este no cubre sus expectativas",
+        "Ningún riesgo",
+        "Solo riesgo legal",
+        "Solo riesgo técnico"
+      ],
+      "correct": "Riesgo reputacional si el software falla, o su riesgo económico si los usuarios no terminan usando el software porque este no cubre sus expectativas"
+    },
+    {
+      "question": "¿Qué NO es suficiente probar según el módulo 1.1?",
+      "options": [
+        "Solo los 'happy paths'",
+        "Los requisitos no funcionales",
+        "Los caminos alternos y situaciones de error",
+        "Los requisitos funcionales"
+      ],
+      "correct": "Solo los 'happy paths'"
+    },
+    {
+      "question": "¿Cuáles son las dos fases principales del testing completo según el módulo 1.2?",
+      "options": [
+        "Verificación (se construyó bien) y Validación (se construyó lo correcto)",
+        "Unitarias e integración",
+        "Análisis y diseño",
+        "Codificación y despliegue"
+      ],
+      "correct": "Verificación (se construyó bien) y Validación (se construyó lo correcto)"
+    },
+    {
+      "question": "¿Qué comprueba la fase de 'verificación' según el módulo 1.2?",
+      "options": [
+        "Que los equipos técnicos comprueban que el software fue desarrollado acorde a sus requisitos (tanto funcionales como no funcionales)",
+        "Que se cumplan las necesidades del negocio",
+        "Solo la interfaz de usuario",
+        "Solo el rendimiento"
+      ],
+      "correct": "Que los equipos técnicos comprueban que el software fue desarrollado acorde a sus requisitos (tanto funcionales como no funcionales)"
+    },
+    {
+      "question": "¿Qué comprueba la fase de 'validación' según el módulo 1.2?",
+      "options": [
+        "Que el peticionario del software (o el responsable funcional) comprueba que el software cubre sus necesidades",
+        "Solo el código fuente",
+        "Solo la base de datos",
+        "Aspectos técnicos"
+      ],
+      "correct": "Que el peticionario del software (o el responsable funcional) comprueba que el software cubre sus necesidades"
+    },
+    {
+      "question": "¿Quién realiza la validación según el módulo 1.2?",
+      "options": [
+        "El Product Owner (PO en adelante) o responsable funcional",
+        "El Release Manager",
+        "El equipo técnico",
+        "El cliente final directamente"
+      ],
+      "correct": "El Product Owner (PO en adelante) o responsable funcional"
+    },
+    {
+      "question": "¿El testing es opcional en el Grupo BBVA según el módulo 2?",
+      "options": [
+        "No, al menos para el Grupo BBVA, donde la norma de testing obliga a pasar exhaustivos procesos de testing sobre nuestros sistemas de software antes de ponerlos a disposición de nuestros clientes",
+        "Depende del país",
+        "Sí, solo en proyectos grandes",
+        "Solo en apps móviles"
+      ],
+      "correct": "No, al menos para el Grupo BBVA, donde la norma de testing obliga a pasar exhaustivos procesos de testing sobre nuestros sistemas de software antes de ponerlos a disposición de nuestros clientes"
+    },
+    {
+      "question": "¿Qué forma parte del ADN de BBVA según el módulo 2?",
+      "options": [
+        "El testing",
+        "Las ventas cruzadas",
+        "Solo el desarrollo ágil",
+        "El marketing digital"
+      ],
+      "correct": "El testing"
+    },
+    {
+      "question": "¿Qué reúne la Norma de Testing en un único documento según el módulo 2?",
+      "options": [
+        "Reúne en un único documento todos los criterios de las distintas regulaciones que impactan al Grupo BBVA respecto al testing (e.g. DORA, SOX, EBA/GL/2019/4, etc.)",
+        "Solo buenas prácticas técnicas",
+        "Solo regulaciones mexicanas",
+        "Solo requisitos de seguridad"
+      ],
+      "correct": "Reúne en un único documento todos los criterios de las distintas regulaciones que impactan al Grupo BBVA respecto al testing (e.g. DORA, SOX, EBA/GL/2019/4, etc.)"
+    },
+    {
+      "question": "¿Cuáles son los objetivos principales de la Norma de Testing según el módulo 2?",
+      "options": [
+        "Garantizar un nivel adecuado de calidad y seguridad, asegurar el cumplimiento de los requisitos esperados, prevenir la introducción (ya sea involuntaria o voluntaria) de defectos que comprometan la estabilidad de las aplicaciones y la integridad de la información",
+        "Eliminar por completo los errores",
+        "Reducir costos y acelerar despliegues",
+        "Automatizar todo el desarrollo"
+      ],
+      "correct": "Garantizar un nivel adecuado de calidad y seguridad, asegurar el cumplimiento de los requisitos esperados, prevenir la introducción (ya sea involuntaria o voluntaria) de defectos que comprometan la estabilidad de las aplicaciones y la integridad de la información"
+    },
+    {
+      "question": "Según el módulo 2, la Norma de Testing es un pilar estratégico para BBVA porque:",
+      "options": [
+        "Nos asegura que, al desarrollar software, no solo cumplimos con estándares técnicos y regulatorios, sino que protegemos la confianza de nuestros clientes y la solidez de nuestras operaciones",
+        "Aumenta la velocidad de desarrollo",
+        "Elimina la necesidad de auditorías",
+        "Reduce costos operativos"
+      ],
+      "correct": "Nos asegura que, al desarrollar software, no solo cumplimos con estándares técnicos y regulatorios, sino que protegemos la confianza de nuestros clientes y la solidez de nuestras operaciones"
+    },
+    {
+      "question": "¿Qué incluye el alcance de la norma según el módulo 2.1?",
+      "options": [
+        "Desarrollos propios BBVA + Componentes software de terceros integrados en desarrollos propios BBVA",
+        "Solo software de terceros puro",
+        "Solo aplicaciones móviles",
+        "Solo desarrollos propios de BBVA"
+      ],
+      "correct": "Desarrollos propios BBVA + Componentes software de terceros integrados en desarrollos propios BBVA"
+    },
+    {
+      "question": "¿Cuántos principios fundamentales establece la norma según el módulo 3?",
+      "options": [
+        "7 principios",
+        "10 principios",
+        "5 principios",
+        "9 principios"
+      ],
+      "correct": "7 principios"
+    },
+    {
+      "question": "Principio 1: Principio de prevalencia legal y regulatoria. En caso de conflictos entre varias regulaciones, se aplicará:",
+      "options": [
+        "La regulación de mayor rango",
+        "La regulación más antigua",
+        "La regulación local",
+        "La regulación menos restrictiva"
+      ],
+      "correct": "La regulación de mayor rango"
+    },
+    {
+      "question": "Principio 2: Principio de concurrencia/solapamiento. En caso de conflictos entre varias regulaciones, se aplicará:",
+      "options": [
+        "La más restrictiva",
+        "Cualquier regulación",
+        "La menos restrictiva",
+        "La más económica"
+      ],
+      "correct": "La más restrictiva"
+    },
+    {
+      "question": "Principio 3: Principio de viabilidad técnica. Si no es viable técnicamente ejecutar un tipo de prueba:",
+      "options": [
+        "Podría no ejecutarse. Se debe documentar el motivo/causa de esta inviabilidad como una excepción a la Norma y siempre que sea posible, implementar controles compensatorios para mitigar los riesgos",
+        "Se ejecuta igualmente",
+        "Se delega al proveedor",
+        "Se elimina permanentemente"
+      ],
+      "correct": "Podría no ejecutarse. Se debe documentar el motivo/causa de esta inviabilidad como una excepción a la Norma y siempre que sea posible, implementar controles compensatorios para mitigar los riesgos"
+    },
+    {
+      "question": "Principio 4: Principio de viabilidad económica. Si no es viable económicamente ejecutar un tipo de prueba:",
+      "options": [
+        "Podría no ejecutarse. Se debe documentar el motivo/causa de esta inviabilidad como una excepción a la Norma y siempre que sea posible, implementar controles compensatorios para mitigar los riesgos",
+        "Se ignora el costo",
+        "Se pospone indefinidamente",
+        "Se ejecuta de todos modos"
+      ],
+      "correct": "Podría no ejecutarse. Se debe documentar el motivo/causa de esta inviabilidad como una excepción a la Norma y siempre que sea posible, implementar controles compensatorios para mitigar los riesgos"
+    },
+    {
+      "question": "Principio 5: Principio de proporcionalidad basado en riesgo/criticidad. Esto significa que:",
+      "options": [
+        "Cuanto más crítico es un sistema software, más riguroso deberá ser el testing que habrá que realizar",
+        "Los sistemas menos críticos requieren más pruebas",
+        "Todos los sistemas tienen el mismo nivel de testing",
+        "Solo los sistemas críticos requieren testing"
+      ],
+      "correct": "Cuanto más crítico es un sistema software, más riguroso deberá ser el testing que habrá que realizar"
+    },
+    {
+      "question": "Principio 6: Principio de máxima automatización. Se priorizará:",
+      "options": [
+        "La creación de pruebas automáticas y mecanismos automatizados frente a los procedimientos manuales",
+        "Evitar toda automatización",
+        "Las pruebas manuales",
+        "Solo las pruebas unitarias automáticas"
+      ],
+      "correct": "La creación de pruebas automáticas y mecanismos automatizados frente a los procedimientos manuales"
+    },
+    {
+      "question": "Principio 7: Principio de desplazamiento a la izquierda o 'shift-left'. Esto significa que:",
+      "options": [
+        "El testing debe hacerse desde las fases más tempranas del SDLC",
+        "El testing solo se hace en producción",
+        "El testing se delega a equipos externos",
+        "El testing se realiza al final del ciclo"
+      ],
+      "correct": "El testing debe hacerse desde las fases más tempranas del SDLC"
+    },
+    {
+      "question": "Según la directriz 4.1, ¿es obligatorio probar los desarrollos antes de su puesta en producción?",
+      "options": [
+        "Sí, sin importar la versión (mayor, menor, correctivo) ni la naturaleza del desarrollo",
+        "Solo los críticos",
+        "Solo si lo pide el cliente",
+        "No, solo los evolutivos"
+      ],
+      "correct": "Sí, sin importar la versión (mayor, menor, correctivo) ni la naturaleza del desarrollo"
+    },
+    {
+      "question": "Según la directriz 4.2, ¿qué debe poder demostrarse para la trazabilidad del requerimiento?",
+      "options": [
+        "Solo el ID del cambio",
+        "Para cada requerimiento, las pruebas que se han diseñado y ejecutado, los resultados obtenidos y el identificador del cambio que ha introducido el requerimiento",
+        "Solo el nombre del desarrollador",
+        "Solo la evidencia final en producción"
+      ],
+      "correct": "Para cada requerimiento, las pruebas que se han diseñado y ejecutado, los resultados obtenidos y el identificador del cambio que ha introducido el requerimiento"
+    },
+    {
+      "question": "¿Quién genera el Plan de Pruebas Estratégico según la directriz 4.3?",
+      "options": [
+        "El Quality Coach",
+        "El App Owner Principal en colaboración con los App Owners N2",
+        "El Release Manager",
+        "El Product Owner solo"
+      ],
+      "correct": "El App Owner Principal en colaboración con los App Owners N2"
+    },
+    {
+      "question": "¿Qué es una 'operativa relevante' según la directriz 4.3.1?",
+      "options": [
+        "Cualquier flujo del sistema",
+        "Flujo funcional que, de no funcionar, el servicio pierde un cometido principal",
+        "Solo el login",
+        "Solo transferencias"
+      ],
+      "correct": "Flujo funcional que, de no funcionar, el servicio pierde un cometido principal"
+    },
+    {
+      "question": "¿Dónde deben ejecutarse las pruebas según la directriz 4.4?",
+      "options": [
+        "En producción directamente",
+        "En entornos previos a producción separados de producción",
+        "En el entorno local del desarrollador",
+        "En la nube pública sin control"
+      ],
+      "correct": "En entornos previos a producción separados de producción"
+    },
+    {
+      "question": "Según la directriz 4.4.1, ¿se permite usar datos reales en entornos previos?",
+      "options": [
+        "Sí, siempre que sean pocos",
+        "No está permitido, salvo que sea indispensable y con enmascaramiento (ej. HAD)",
+        "Sí, sin ningún tipo de restricción",
+        "Solo datos públicos"
+      ],
+      "correct": "No está permitido, salvo que sea indispensable y con enmascaramiento (ej. HAD)"
+    },
+    {
+      "question": "¿Qué debe hacerse con los datos reales al finalizar las pruebas según la directriz 4.4.1?",
+      "options": [
+        "Conservarlos para próximas ejecuciones",
+        "Eliminarlos conforme a la Norma de Tratamiento de Información",
+        "Publicarlos en repositorios internos",
+        "Compartirlos con el equipo"
+      ],
+      "correct": "Eliminarlos conforme a la Norma de Tratamiento de Información"
+    },
+    {
+      "question": "¿Cuándo se considera un caso de prueba insatisfactorio según la directriz 4.5?",
+      "options": [
+        "Cuando tarda más de 5 minutos",
+        "Cuando termina por defecto/fallo o el resultado obtenido no es el esperado",
+        "Cuando es ejecutado manualmente",
+        "Cuando no tiene captura de pantalla"
+      ],
+      "correct": "Cuando termina por defecto/fallo o el resultado obtenido no es el esperado"
+    },
+    {
+      "question": "¿Quién determina la criticidad de un defecto según la directriz 4.5?",
+      "options": [
+        "Solo el desarrollador",
+        "El Product Owner/App Owner y el Tester",
+        "El auditor externo",
+        "El cliente final"
+      ],
+      "correct": "El Product Owner/App Owner y el Tester"
+    },
+    {
+      "question": "¿Qué genera pasar a producción con defectos no gestionados según la directriz 4.5.1?",
+      "options": [
+        "Mayor velocidad de entrega",
+        "Deuda técnica",
+        "Cumplimiento automático",
+        "Ventaja competitiva"
+      ],
+      "correct": "Deuda técnica"
+    },
+    {
+      "question": "¿Quién es el responsable final de la deuda técnica según la directriz 4.5.1?",
+      "options": [
+        "El desarrollador",
+        "El Product Owner o Service Owner",
+        "El proveedor externo",
+        "El Quality Coach"
+      ],
+      "correct": "El Product Owner o Service Owner"
+    },
+    {
+      "question": "¿Es obligatorio generar y retener evidencias según la directriz 4.6?",
+      "options": [
+        "Solo en proyectos grandes",
+        "Sí, es obligatorio",
+        "No, solo cuando hay auditoría",
+        "Solo para DORA"
+      ],
+      "correct": "Sí, es obligatorio"
+    },
+    {
+      "question": "¿Cuál es el tiempo mínimo de retención de evidencias según la directriz 4.7?",
+      "options": [
+        "6 meses",
+        "3 meses o las últimas 10 ejecuciones; 12 meses para DORA/SOX",
+        "1 mes",
+        "Indefinidamente"
+      ],
+      "correct": "3 meses o las últimas 10 ejecuciones; 12 meses para DORA/SOX"
+    },
+    {
+      "question": "¿Qué pruebas son obligatorias para componentes de terceros según la directriz 4.10?",
+      "options": [
+        "Solo pruebas UI",
+        "SCA, SAST y verificación de firmas de integridad",
+        "Ninguna",
+        "Solo pruebas unitarias"
+      ],
+      "correct": "SCA, SAST y verificación de firmas de integridad"
+    },
+    {
+      "question": "¿Cuál es el umbral para el análisis estático de código según la directriz 5.1?",
+      "options": [
+        "Máximo 5% de issues",
+        "0% Critical/Major/Security Issues",
+        "Solo warnings permitidos",
+        "No hay umbral definido"
+      ],
+      "correct": "0% Critical/Major/Security Issues"
+    },
+    {
+      "question": "¿Cuál es el umbral mínimo para pruebas unitarias según la directriz 5.2?",
+      "options": [
+        "70% cobertura",
+        "100% Pass + cobertura ≥80%",
+        "90% con excepciones justificadas",
+        "50% cobertura"
+      ],
+      "correct": "100% Pass + cobertura ≥80%"
+    },
+    {
+      "question": "¿Cuál es el umbral para pruebas de integración según la directriz 5.3?",
+      "options": [
+        "90% Pass",
+        "100% Pass + 100% flujos relevantes",
+        "80% Pass",
+        "70% Pass"
+      ],
+      "correct": "100% Pass + 100% flujos relevantes"
+    },
+    {
+      "question": "¿Cuándo son obligatorias las pruebas de regresión según la directriz 5.4?",
+      "options": [
+        "Solo en versiones mayores",
+        "En versiones menores, corrección de bugs y versiones mayores con dependencias",
+        "Nunca",
+        "Solo al final del año"
+      ],
+      "correct": "En versiones menores, corrección de bugs y versiones mayores con dependencias"
+    },
+    {
+      "question": "¿Cuál es el umbral para pruebas de aceptación según la directriz 5.6?",
+      "options": [
+        "95% Pass",
+        "100% Pass",
+        "90% Pass",
+        "80% Pass"
+      ],
+      "correct": "100% Pass"
+    },
+    {
+      "question": "¿Quién ejecuta las pruebas según la norma?",
+      "options": [
+        "Equipo externo especializado",
+        "El equipo de desarrollo",
+        "Solo el Quality Coach",
+        "El cliente final"
+      ],
+      "correct": "El equipo de desarrollo"
+    },
+    {
+      "question": "¿Quién certifica el cumplimiento de los requerimientos de usuario?",
+      "options": [
+        "El App Owner",
+        "El Product Owner",
+        "El Service Owner",
+        "El Release Manager"
+      ],
+      "correct": "El Product Owner"
+    },
+    {
+      "question": "¿Cuándo son obligatorias las pruebas de seguridad según la directriz 5.6?",
+      "options": [
+        "Solo en aplicaciones móviles",
+        "Según la Norma General Ciclo de Vida Desarrollo Seguro",
+        "Nunca",
+        "Solo en frontend"
+      ],
+      "correct": "Según la Norma General Ciclo de Vida Desarrollo Seguro"
+    },
+    {
+      "question": "¿Cuándo son obligatorias las pruebas de hacking ético según el módulo 5.6?",
+      "options": [
+        "Solo en apps públicas",
+        "Revisiones técnicas para detectar vulnerabilidades en el código fuente y configuración",
+        "Solo pruebas de carga",
+        "Solo pruebas UI"
+      ],
+      "correct": "Revisiones técnicas para detectar vulnerabilidades en el código fuente y configuración"
+    },
+    {
+      "question": "¿Cuándo son obligatorias las pruebas de accesibilidad según la directriz 5.9?",
+      "options": [
+        "Siempre",
+        "Cuando el desarrollo está en alcance de la Ley y Reglamento de Accesibilidad",
+        "Solo en apps móviles",
+        "Nunca"
+      ],
+      "correct": "Cuando el desarrollo está en alcance de la Ley y Reglamento de Accesibilidad"
+    },
+    {
+      "question": "¿Qué es la verificación postproducción según la directriz 5.10?",
+      "options": [
+        "Pruebas opcionales en preproducción",
+        "Comprobación final tras el despliegue en producción para verificar el correcto funcionamiento",
+        "Revisión de código",
+        "Auditoría externa"
+      ],
+      "correct": "Comprobación final tras el despliegue en producción para verificar el correcto funcionamiento"
+    },
+    {
+      "question": "¿Cuántos macroprocesos tiene el Proceso de Creación E2E según el módulo 6?",
+      "options": [
+        "5",
+        "7",
+        "3",
+        "10"
+      ],
+      "correct": "7"
+    },
+    {
+      "question": "¿Qué se realiza en la fase 'Ideación y Evaluación' del Proceso de Creación E2E?",
+      "options": [
+        "Despliegue en producción",
+        "Construcción de componentes",
+        "Definición de criterios de aceptación y requisitos de calidad/seguridad",
+        "Ejecución de pruebas"
+      ],
+      "correct": "Definición de criterios de aceptación y requisitos de calidad/seguridad"
+    },
+    {
+      "question": "¿Qué significa RMP en el contexto de la norma?",
+      "options": [
+        "Release Management Process",
+        "Requirement Management Plan",
+        "Riesgo Mitigado por Pruebas",
+        "Risk Management Protocol"
+      ],
+      "correct": "Riesgo Mitigado por Pruebas"
+    },
+    {
+      "question": "¿Dónde se registran los fallos detectados durante las pruebas?",
+      "options": [
+        "En correo electrónico",
+        "En papel",
+        "En Jira como bugs",
+        "En Excel personal"
+      ],
+      "correct": "En Jira como bugs"
+    },
+    {
+      "question": "¿Qué documento facilita la trazabilidad en México según el módulo 6?",
+      "options": [
+        "C101",
+        "C300",
+        "C204 (matriz de casos de prueba)",
+        "C999"
+      ],
+      "correct": "C204 (matriz de casos de prueba)"
+    },
+    {
+      "question": "¿Qué herramienta se usa para enmascarar datos reales?",
+      "options": [
+        "SonarQube",
+        "Helix",
+        "HAD",
+        "Jira"
+      ],
+      "correct": "HAD"
+    },
+    {
+      "question": "¿Qué herramienta gestiona las incidencias en producción?",
+      "options": [
+        "Jira",
+        "Confluence",
+        "Helix",
+        "Bitbucket"
+      ],
+      "correct": "Helix"
+    },
+    {
+      "question": "¿Quién gestiona el almacenamiento de evidencias de pruebas?",
+      "options": [
+        "El Quality Coach",
+        "El proveedor externo",
+        "Service Owner y App Owners",
+        "El cliente final"
+      ],
+      "correct": "Service Owner y App Owners"
+    },
+    {
+      "question": "¿Son habituales las pruebas directamente en producción?",
+      "options": [
+        "Sí, siempre que sea rápido",
+        "Solo para hotfixes",
+        "No, requieren excepción documentada y aprobación rigurosa",
+        "Nunca"
+      ],
+      "correct": "No, requieren excepción documentada y aprobación rigurosa"
+    },
+    {
+      "question": "¿Qué significa FDS en el contexto de la norma?",
+      "options": [
+        "Fast Deployment System",
+        "Frontline Development Support",
+        "Functional Design Specification",
+        "Failure Detection System"
+      ],
+      "correct": "Frontline Development Support"
+    },
+    {
+      "question": "¿Qué incluye la fase 'Pruebas E2E' del Proceso de Creación?",
+      "options": [
+        "Solo planificación",
+        "Solo revisión de código",
+        "Despliegue en calidad, ambientación, ejecución de pruebas y resolución de defectos",
+        "Solo despliegue en producción"
+      ],
+      "correct": "Despliegue en calidad, ambientación, ejecución de pruebas y resolución de defectos"
+    },
+    {
+      "question": "¿Dónde se puede consultar más información oficial de la norma?",
+      "options": [
+        "YouTube",
+        "LinkedIn",
+        "Sitio oficial de BBVA Platform",
+        "Google"
+      ],
+      "correct": "Sitio oficial de BBVA Platform"
+    },
+    {
+      "question": "¿Qué NO está en alcance de la Norma de Testing?",
+      "options": [
+        "Desarrollos propios BBVA",
+        "Apps móviles",
+        "Software de terceros puro sin integración",
+        "Componentes de terceros integrados"
+      ],
+      "correct": "Software de terceros puro sin integración"
+    },
+    {
+      "question": "¿Qué son comportamientos bloqueantes según la directriz 4.10?",
+      "options": [
+        "Errores menores de logs",
+        "Advertencias de Sonar",
+        "Ocurrencias que interrumpen el build/deploy en sistemas críticos DORA/SOX",
+        "Warnings de compilación"
+      ],
+      "correct": "Ocurrencias que interrumpen el build/deploy en sistemas críticos DORA/SOX"
+    },
+    {
+      "question": "¿Qué riesgos mitiga principalmente la Norma de Testing?",
+      "options": [
+        "Solo financieros",
+        "Solo de marketing",
+        "Operativos, regulatorios, reputacionales y de seguridad",
+        "Solo de velocidad"
+      ],
+      "correct": "Operativos, regulatorios, reputacionales y de seguridad"
+    },
+    {
+      "question": "¿Qué son las pruebas de hacking ético según el módulo 5.6?",
+      "options": [
+        "Pruebas de carga",
+        "Revisiones técnicas para detectar vulnerabilidades",
+        "Pruebas UI automatizadas",
+        "Pruebas de rendimiento"
+      ],
+      "correct": "Revisiones técnicas para detectar vulnerabilidades"
+    },
+    {
+      "question": "¿Cuándo son obligatorias las pruebas de rendimiento según la directriz 5.8?",
+      "options": [
+        "Siempre",
+        "Solo en apps móviles",
+        "Solo en desarrollos críticos por disponibilidad (DORA)",
+        "Nunca"
+      ],
+      "correct": "Solo en desarrollos críticos por disponibilidad (DORA)"
+    },
+    {
+      "question": "¿Qué se realiza en la fase 'Gestión de Cambios' del Proceso E2E?",
+      "options": [
+        "Codificación",
+        "Instalación en productivo, validación de la implantación y verificación postproducción",
+        "Diseño de pantallas",
+        "Pruebas manuales"
+      ],
+      "correct": "Instalación en productivo, validación de la implantación y verificación postproducción"
+    },
+    {
+      "question": "¿Qué información recaba el documento C204 (matriz de casos de prueba)?",
+      "options": [
+        "Solo nombres de testers",
+        "Fechas, maquetas, links Jira, casos de prueba, defectos, evidencias",
+        "Solo costos",
+        "Solo fechas de entrega"
+      ],
+      "correct": "Fechas, maquetas, links Jira, casos de prueba, defectos, evidencias"
+    },
+    {
+      "question": "¿Qué asegura el Plan de Pruebas Estratégico?",
+      "options": [
+        "Reducción de costos",
+        "Cobertura total de todo el código",
+        "Cobertura de los requisitos críticos o relevantes",
+        "Solo pruebas manuales"
+      ],
+      "correct": "Cobertura de los requisitos críticos o relevantes"
+    },
+    {
+      "question": "¿Qué características definen una operativa relevante según la directriz 4.3.1?",
+      "options": [
+        "Solo es nueva",
+        "Afecta CIDA, muy usada, visible en UI, dependencias, propensa a fallos, relevante por Service Owner",
+        "Solo backend",
+        "Solo móvil"
+      ],
+      "correct": "Afecta CIDA, muy usada, visible en UI, dependencias, propensa a fallos, relevante por Service Owner"
+    },
+    {
+      "question": "¿Qué riesgos introducen los componentes de terceros según la directriz 4.10?",
+      "options": [
+        "Solo de rendimiento",
+        "Obsoletos o modificados maliciosamente",
+        "Ningún riesgo",
+        "Solo de interfaz"
+      ],
+      "correct": "Obsoletos o modificados maliciosamente"
+    },
+    {
+      "question": "¿Qué se realiza en la fase 'Desarrollo' del Proceso E2E?",
+      "options": [
+        "Auditoría externa",
+        "Construcción de componentes y pruebas unitarias",
+        "Despliegue en producción",
+        "Diseño de arquitectura"
+      ],
+      "correct": "Construcción de componentes y pruebas unitarias"
+    },
+    {
+      "question": "¿Qué se realiza en la fase 'Delegación al BEx' del Proceso E2E?",
+      "options": [
+        "Codificación",
+        "Evidencia de correcto funcionamiento y delegación a equipos BEx",
+        "Diseño de pruebas",
+        "Ejecución manual"
+      ],
+      "correct": "Evidencia de correcto funcionamiento y delegación a equipos BEx"
+    },
+    {
+      "question": "¿Qué es un defecto según la definición de la norma?",
+      "options": [
+        "Requisito nuevo",
+        "Paso, proceso o definición de datos incorrecto",
+        "Mejora de rendimiento",
+        "Diseño visual"
+      ],
+      "correct": "Paso, proceso o definición de datos incorrecto"
+    },
+    {
+      "question": "¿Qué son los requisitos funcionales según el módulo 1.1?",
+      "options": [
+        "Solo seguridad",
+        "Acciones que debe habilitar el sistema (ej. transferencias)",
+        "Condiciones de operación",
+        "Solo rendimiento"
+      ],
+      "correct": "Acciones que debe habilitar el sistema (ej. transferencias)"
+    },
+    {
+      "question": "¿Qué son los requisitos no funcionales según el módulo 1.1?",
+      "options": [
+        "Solo datos de entrada",
+        "Acciones específicas del sistema",
+        "Solo interfaz de usuario",
+        "Condiciones en que deberá operar el sistema (rendimiento, seguridad, etc.)"
+      ],
+      "correct": "Condiciones en que deberá operar el sistema (rendimiento, seguridad, etc.)"
+    },
+    {
+      "question": "¿Qué protege principalmente la Norma de Testing según el módulo 2?",
+      "options": [
+        "Los costos operativos",
+        "La velocidad de desarrollo",
+        "El marketing digital",
+        "Confianza de clientes y solidez de operaciones"
+      ],
+      "correct": "Confianza de clientes y solidez de operaciones"
+    },
+    {
+      "question": "¿Qué responsabilidad asume BBVA en desarrollos propios según el módulo 2.1?",
+      "options": [
+        "Solo la integración",
+        "Ninguna responsabilidad",
+        "Solo el testing final",
+        "Total en todas las fases del SDLC"
+      ],
+      "correct": "Total en todas las fases del SDLC"
+    },
+    {
+      "question": "¿Qué promueve el principio de máxima automatización?",
+      "options": [
+        "Solo pruebas unitarias",
+        "Nada de automatización",
+        "Pruebas manuales siempre",
+        "Pruebas y mecanismos automatizados frente a manuales"
+      ],
+      "correct": "Pruebas y mecanismos automatizados frente a manuales"
+    },
+    {
+      "question": "¿Qué significa 'shift-left' según el principio 7?",
+      "options": [
+        "Testing solo en preproducción",
+        "Testing al final del ciclo",
+        "Testing solo en producción",
+        "Testing desde las fases más tempranas del SDLC"
+      ],
+      "correct": "Testing desde las fases más tempranas del SDLC"
+    },
+    {
+      "question": "¿Cuál es el proceso de testing ideal según el módulo 1.2?",
+      "options": [
+        "Solo en preproducción",
+        "Solo al final del proyecto",
+        "Solo postproducción",
+        "Integrado a lo largo de todo el SDLC"
+      ],
+      "correct": "Integrado a lo largo de todo el SDLC"
+    },
+    {
+      "question": "¿Qué NO basta probar según el módulo 1.1?",
+      "options": [
+        "Caminos alternos y errores",
+        "Requisitos funcionales",
+        "Happy paths",
+        "Requisitos no funcionales"
+      ],
+      "correct": "Happy paths"
+    },
+    {
+      "question": "¿Qué evalúa la verificación según el módulo 1.2?",
+      "options": [
+        "Solo la interfaz",
+        "Lo que quiere el cliente",
+        "Solo rendimiento",
+        "Si se construyó bien técnicamente"
+      ],
+      "correct": "Si se construyó bien técnicamente"
+    },
+    {
+      "question": "¿Qué evalúa la validación según el módulo 1.2?",
+      "options": [
+        "Aspectos técnicos",
+        "Solo código fuente",
+        "Solo base de datos",
+        "Si se construyó lo que necesita el negocio"
+      ],
+      "correct": "Si se construyó lo que necesita el negocio"
+    },
+    {
+      "question": "¿La Norma de Testing es un pilar estratégico para BBVA?",
+      "options": [
+        "Solo para Europa",
+        "No, es opcional",
+        "Solo para México",
+        "Sí, asegura calidad, seguridad y cumplimiento"
+      ],
+      "correct": "Sí, asegura calidad, seguridad y cumplimiento"
+    },
+    {
+      "question": "¿Qué principio aplica la regulación más restrictiva en caso de solapamiento?",
+      "options": [
+        "Shift-left",
+        "Viabilidad técnica",
+        "Prevalencia",
+        "Concurrencia/solapamiento"
+      ],
+      "correct": "Concurrencia/solapamiento"
+    },
+    {
+      "question": "¿Qué principio prioriza la automatización máxima?",
+      "options": [
+        "Shift-left",
+        "Viabilidad",
+        "Proporcionalidad",
+        "Máxima automatización"
+      ],
+      "correct": "Máxima automatización"
+    },
+    {
+      "question": "¿Qué principio basa el rigor del testing en la criticidad del sistema?",
+      "options": [
+        "Máxima automatización",
+        "Concurrencia",
+        "Prevalencia",
+        "Proporcionalidad basado en riesgo"
+      ],
+      "correct": "Proporcionalidad basado en riesgo"
+    },
+    {
+      "question": "¿Qué directriz obliga a probar todos los desarrollos antes de producción?",
+      "options": [
+        "Solo en pre",
+        "Opcional",
+        "Solo postproducción",
+        "Probar los desarrollos antes de su puesta en producción"
+      ],
+      "correct": "Probar los desarrollos antes de su puesta en producción"
+    },
+    {
+      "question": "¿Qué facilita la trazabilidad en México según el módulo 6?",
+      "options": [
+        "Jira solo",
+        "Excel",
+        "Helix",
+        "C204"
+      ],
+      "correct": "C204"
+    },
+    {
+      "question": "¿Qué consolida el Plan de Pruebas Estratégico?",
+      "options": [
+        "Solo nombres",
+        "Solo fechas",
+        "Solo costos",
+        "Estrategia de pruebas para cumplir la Norma"
+      ],
+      "correct": "Estrategia de pruebas para cumplir la Norma"
+    },
+    {
+      "question": "¿Qué características tiene una operativa relevante?",
+      "options": [
+        "Solo nueva",
+        "Todas las anteriores",
+        "Solo backend",
+        "Afecta CIDA, muy usada, visible UI, dependencias, propensa fallos, relevante por SO"
+      ],
+      "correct": "Afecta CIDA, muy usada, visible UI, dependencias, propensa fallos, relevante por SO"
+    },
+    {
+      "question": "¿Qué herramienta se usa para enmascarar datos reales?",
+      "options": [
+        "Sonar",
+        "Git",
+        "Docker",
+        "HAD"
+      ],
+      "correct": "HAD"
+    },
+    {
+      "question": "¿Qué se hace si un defecto no se corrige antes de producción?",
+      "options": [
+        "Ignorar",
+        "Eliminar el cambio",
+        "Promover igual",
+        "Asumido por Service Owner o genera deuda técnica"
+      ],
+      "correct": "Asumido por Service Owner o genera deuda técnica"
+    },
+    {
+      "question": "¿Qué regula la deuda técnica según la directriz 4.5.1?",
+      "options": [
+        "Solo verbal",
+        "No hay norma",
+        "Solo escrita en comentarios",
+        "Norma de Gestión de Deuda Técnica"
+      ],
+      "correct": "Norma de Gestión de Deuda Técnica"
+    },
+    {
+      "question": "¿Cuánto tiempo se deben retener las evidencias DORA/SOX?",
+      "options": [
+        "Indefinido",
+        "1 mes",
+        "3 meses",
+        "12 meses"
+      ],
+      "correct": "12 meses"
+    },
+    {
+      "question": "¿Qué pruebas son obligatorias para componentes de terceros?",
+      "options": [
+        "Regresión",
+        "UI",
+        "Unitarias",
+        "SCA, SAST, verificación de firmas"
+      ],
+      "correct": "SCA, SAST, verificación de firmas"
+    },
+    {
+      "question": "Según el módulo 1.2, ¿cuál es el proceso de testing de forma ideal?",
+      "options": [
+        "Solo en producción",
+        "Solo al final del ciclo",
+        "Solo con herramientas de IA",
+        "Debe estar integrado a lo largo de todo el SDLC. En concreto, un proceso de testing completo contiene dos fases"
+      ],
+      "correct": "Debe estar integrado a lo largo de todo el SDLC. En concreto, un proceso de testing completo contiene dos fases"
+    },
+    {
+      "question": "Según el módulo 2, ¿cuáles son los tres objetivos principales de la Norma de Testing BBVA?",
+      "options": [
+        "Reducir costos, acelerar despliegues y eliminar errores",
+        "Solo cumplir regulaciones externas",
+        "Aumentar la velocidad, delegar pruebas y usar solo IA",
+        "Garantizar un nivel adecuado de calidad y seguridad; Asegurar el cumplimiento de los requisitos esperados; Prevenir la introducción (ya sea involuntaria o voluntaria) de defectos que comprometan la estabilidad de las aplicaciones y la integridad de la información"
+      ],
+      "correct": "Garantizar un nivel adecuado de calidad y seguridad; Asegurar el cumplimiento de los requisitos esperados; Prevenir la introducción (ya sea involuntaria o voluntaria) de defectos que comprometan la estabilidad de las aplicaciones y la integridad de la información"
+    },
+    {
+      "question": "Según el módulo 6 (página 23), ¿qué es la verificación postproducción?",
+      "options": [
+        "Solo una revisión de logs",
+        "Una prueba opcional que se realiza en preproducción",
+        "Una auditoría externa",
+        "Comprobación final tras el despliegue en producción para verificar el correcto funcionamiento del software y que no se han introducido regresiones"
+      ],
+      "correct": "Comprobación final tras el despliegue en producción para verificar el correcto funcionamiento del software y que no se han introducido regresiones"
+    }
+  ]
+}
