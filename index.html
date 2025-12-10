@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simulador de Examen</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617; /* dark */
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 16px;
+    }
+    .app {
+      width: 100%;
+      max-width: 800px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-weight: 700;
+      color: #f9fafb;
+    }
+
+    /* MENÚ */
+    .card {
+      background: #020617;
+      border-radius: 18px;
+      padding: 24px 20px;
+      box-shadow:
+        0 20px 25px -5px rgba(15, 23, 42, 0.8),
+        0 8px 10px -6px rgba(15, 23, 42, 0.7);
+      border: 1px solid #1f2937;
+    }
+    .menu-title {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+    }
+    .alert {
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+    .alert-error {
+      background: rgba(248, 113, 113, 0.09);
+      border: 1px solid rgba(248, 113, 113, 0.7);
+      color: #fecaca;
+    }
+    .alert-ok {
+      background: rgba(34, 197, 94, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.7);
+      color: #bbf7d0;
+    }
+    .btn {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-top: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #f9fafb;
+      transition: transform 0.06s ease, box-shadow 0.06s ease, opacity 0.08s;
+      box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.7);
+    }
+    .btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 6px -2px rgba(15, 23, 42, 0.8);
+    }
+    .btn-primary {
+      background: #2563eb;
+    }
+    .btn-success {
+      background: #16a34a;
+    }
+    .btn-purple {
+      background: #a855f7;
+    }
+    .btn-cyan {
+      background: #06b6d4;
+    }
+    .btn-gray {
+      background: #4b5563;
+    }
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .quiz-info {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* QUIZ */
+    .quiz-wrapper {
+      margin-top: 24px;
+    }
+    .quiz-card {
+      background: #020617;
+      border-radius: 18px;
+      padding: 24px 22px 20px;
+      border: 1px solid #1f2937;
+      box-shadow:
+        0 20px 25px -5px rgba(15, 23, 42, 0.8),
+        0 8px 10px -6px rgba(15, 23, 42, 0.7);
+    }
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 14px;
+      gap: 12px;
+    }
+    .quiz-mode-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+    .quiz-counter {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+    .quiz-question {
+      margin: 10px 0 14px;
+      font-size: 1.05rem;
+      color: #f9fafb;
+    }
+    .options {
+      margin-bottom: 14px;
+    }
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.1s ease, border-color 0.1s ease;
+      border: 1px solid transparent;
+    }
+    .option:hover {
+      background: #0b1120;
+    }
+    .option input {
+      accent-color: #3b82f6;
+      cursor: pointer;
+    }
+    .option.selected {
+      background: #0b1120;
+      border-color: #3b82f6;
+    }
+    .option-text {
+      font-size: 0.98rem;
+    }
+
+    .quiz-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    .btn-small {
+      flex: 1;
+    }
+
+    .feedback {
+      margin-top: 6px;
+      min-height: 20px;
+      font-size: 0.95rem;
+    }
+    .feedback-ok {
+      color: #4ade80;
+    }
+    .feedback-bad {
+      color: #fca5a5;
+    }
+
+    .summary {
+      margin-top: 20px;
+      padding: 16px 16px 14px;
+      border-radius: 14px;
+      border: 1px solid #1f2937;
+      background: #020617;
+    }
+    .summary h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+    .summary p {
+      margin: 4px 0 0;
+      font-size: 0.95rem;
+      color: #d1d5db;
+    }
+    .summary table {
+      margin-top: 10px;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+    .summary th, .summary td {
+      border: 1px solid #1f2937;
+      padding: 6px;
+    }
+    .summary th {
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    .footer {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+    .footer a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <h1>Simulador de Examen</h1>
+
+    <!-- PANTALLA MENÚ -->
+    <div id="menuScreen" class="card">
+      <h2 class="menu-title">Selecciona un modo</h2>
+      <div id="banner" class="alert alert-error">
+        No hay preguntas cargadas. <strong>Carga un archivo JSON</strong>
+      </div>
+
+      <button id="btnPractice" class="btn btn-primary" disabled>Modo Práctica</button>
+      <button id="btnExam" class="btn btn-success" disabled>Modo Examen</button>
+      <button id="btnDownload" class="btn btn-purple" disabled>Descargar JSON</button>
+      <button id="btnUpload" class="btn btn-cyan">Cargar JSON</button>
+      <button id="btnClear" class="btn btn-gray">Limpiar Datos</button>
+
+      <div id="quizInfo" class="quiz-info"></div>
+
+      <!-- input de archivo oculto -->
+      <input type="file" id="fileInput" accept=".json,application/json" style="display:none" />
+    </div>
+
+    <!-- PANTALLA QUIZ -->
+    <div id="quizScreen" class="quiz-wrapper hidden">
+      <div class="quiz-card">
+        <div class="quiz-header">
+          <div id="modeTitle" class="quiz-mode-title">Modo Práctica</div>
+          <div id="questionCounter" class="quiz-counter"></div>
+        </div>
+
+        <div id="questionText" class="quiz-question"></div>
+        <div id="optionsContainer" class="options"></div>
+
+        <div id="feedback" class="feedback"></div>
+
+        <div class="quiz-actions">
+          <button id="btnAction" class="btn btn-primary btn-small">Resolver</button>
+          <button id="btnBackMenu" class="btn btn-gray btn-small">Volver al Menú</button>
+        </div>
+      </div>
+
+      <div id="summary" class="summary hidden"></div>
+
+      <div class="footer">
+        By <span>Nathanael Martinez</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let quizData = null;
+    let currentMode = null; // 'practice' | 'exam'
+    let currentQuestions = [];
+    let currentIndex = 0;
+    let userAnswers = [];
+    let hasChecked = false; // para modo práctica
+
+    const menuScreen = document.getElementById('menuScreen');
+    const quizScreen = document.getElementById('quizScreen');
+
+    const banner = document.getElementById('banner');
+    const quizInfo = document.getElementById('quizInfo');
+
+    const fileInput = document.getElementById('fileInput');
+    const btnUpload = document.getElementById('btnUpload');
+    const btnPractice = document.getElementById('btnPractice');
+    const btnExam = document.getElementById('btnExam');
+    const btnDownload = document.getElementById('btnDownload');
+    const btnClear = document.getElementById('btnClear');
+
+    const modeTitle = document.getElementById('modeTitle');
+    const questionCounter = document.getElementById('questionCounter');
+    const questionText = document.getElementById('questionText');
+    const optionsContainer = document.getElementById('optionsContainer');
+    const feedback = document.getElementById('feedback');
+    const btnAction = document.getElementById('btnAction');
+    const btnBackMenu = document.getElementById('btnBackMenu');
+    const summaryDiv = document.getElementById('summary');
+
+    function updateBanner() {
+      if (!quizData) {
+        banner.textContent = "No hay preguntas cargadas. Carga un archivo JSON";
+        banner.className = "alert alert-error";
+        quizInfo.textContent = "";
+      } else {
+        banner.textContent = "Preguntas cargadas correctamente. Puedes elegir un modo.";
+        banner.className = "alert alert-ok";
+        quizInfo.textContent =
+          `Cuestionario: "${quizData.title || "Sin título"}" · ${quizData.questions.length} preguntas`;
+      }
+    }
+
+    // --- CARGAR JSON ---
+    btnUpload.addEventListener('click', () => fileInput.click());
+
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = e => {
+        try {
+          const data = JSON.parse(e.target.result);
+          if (!data || !Array.isArray(data.questions)) {
+            throw new Error('El JSON debe tener un arreglo "questions".');
+          }
+          quizData = data;
+          currentMode = null;
+          btnPractice.disabled = false;
+          btnExam.disabled = false;
+          btnDownload.disabled = false;
+          updateBanner();
+        } catch (err) {
+          alert("Error al leer JSON: " + err.message);
+          quizData = null;
+          btnPractice.disabled = true;
+          btnExam.disabled = true;
+          btnDownload.disabled = true;
+          updateBanner();
+        }
+      };
+      reader.readAsText(file, 'utf-8');
+    });
+
+    // --- DESCARGAR JSON ACTUAL ---
+    btnDownload.addEventListener('click', () => {
+      if (!quizData) return;
+      const blob = new Blob([JSON.stringify(quizData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'preguntas.json';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    // --- LIMPIAR DATOS ---
+    btnClear.addEventListener('click', () => {
+      quizData = null;
+      currentMode = null;
+      currentQuestions = [];
+      currentIndex = 0;
+      userAnswers = [];
+      hasChecked = false;
+      fileInput.value = "";
+      btnPractice.disabled = true;
+      btnExam.disabled = true;
+      btnDownload.disabled = true;
+      updateBanner();
+      showMenu();
+    });
+
+    // --- INICIAR MODO PRÁCTICA ---
+    btnPractice.addEventListener('click', () => {
+      if (!quizData) return;
+      currentMode = 'practice';
+      currentQuestions = quizData.questions.slice(); // todas
+      startQuiz();
+    });
+
+    // --- INICIAR MODO EXAMEN (10 PREGUNTAS) ---
+    btnExam.addEventListener('click', () => {
+      if (!quizData) return;
+      currentMode = 'exam';
+      const shuffled = quizData.questions.slice().sort(() => Math.random() - 0.5);
+      const maxQ = Math.min(10, shuffled.length);
+      currentQuestions = shuffled.slice(0, maxQ);
+      startQuiz();
+    });
+
+    function startQuiz() {
+      currentIndex = 0;
+      userAnswers = new Array(currentQuestions.length).fill(null);
+      hasChecked = false;
+      feedback.textContent = "";
+      feedback.className = "feedback";
+
+      summaryDiv.classList.add('hidden');
+      renderQuestion();
+      showQuiz();
+    }
+
+    function renderQuestion() {
+      const q = currentQuestions[currentIndex];
+      const total = currentQuestions.length;
+
+      modeTitle.textContent =
+        currentMode === 'practice' ? 'Modo Práctica' : 'Modo Examen';
+
+      questionCounter.textContent = `Pregunta ${currentIndex + 1} de ${total}`;
+      questionText.textContent = q.question || "";
+
+      optionsContainer.innerHTML = "";
+      feedback.textContent = "";
+      feedback.className = "feedback";
+
+      q.options.forEach((optText, idx) => {
+        const optionId = `opt-${currentIndex}-${idx}`;
+
+        const label = document.createElement('label');
+        label.className = 'option';
+
+        const input = document.createElement('input');
+        input.type = 'radio';
+        input.name = 'option';
+        input.value = optText;
+        input.id = optionId;
+
+        const span = document.createElement('span');
+        span.className = 'option-text';
+        span.textContent = optText;
+
+        label.appendChild(input);
+        label.appendChild(span);
+        optionsContainer.appendChild(label);
+
+        input.addEventListener('change', () => {
+          document
+            .querySelectorAll('.option')
+            .forEach(l => l.classList.remove('selected'));
+          label.classList.add('selected');
+        });
+
+        // restaurar selección si ya respondió
+        if (userAnswers[currentIndex] === optText) {
+          input.checked = true;
+          label.classList.add('selected');
+        }
+      });
+
+      if (currentMode === 'practice') {
+        hasChecked = false;
+        btnAction.textContent = "Resolver";
+      } else {
+        btnAction.textContent =
+          currentIndex === total - 1 ? "Finalizar examen" : "Siguiente";
+      }
+    }
+
+    btnAction.addEventListener('click', () => {
+      if (currentMode === 'practice') {
+        handlePracticeAction();
+      } else if (currentMode === 'exam') {
+        handleExamAction();
+      }
+    });
+
+    function handlePracticeAction() {
+      const selected = document.querySelector('input[name="option"]:checked');
+
+      if (!hasChecked) {
+        if (!selected) {
+          feedback.textContent = "Selecciona una opción antes de resolver.";
+          feedback.className = "feedback feedback-bad";
+          return;
+        }
+        const answer = selected.value;
+        userAnswers[currentIndex] = answer;
+        const correct = currentQuestions[currentIndex].correct;
+
+        if (answer === correct) {
+          feedback.textContent = "✔ Correcto";
+          feedback.className = "feedback feedback-ok";
+        } else {
+          feedback.textContent = "✘ Incorrecto. Respuesta correcta: " + correct;
+          feedback.className = "feedback feedback-bad";
+        }
+
+        hasChecked = true;
+
+        if (currentIndex === currentQuestions.length - 1) {
+          btnAction.textContent = "Ver resumen";
+        } else {
+          btnAction.textContent = "Siguiente pregunta";
+        }
+      } else {
+        // ya resolvió esta pregunta
+        if (currentIndex < currentQuestions.length - 1) {
+          currentIndex++;
+          renderQuestion();
+        } else {
+          showSummary("práctica");
+        }
+      }
+    }
+
+    function handleExamAction() {
+      const selected = document.querySelector('input[name="option"]:checked');
+      if (!selected) {
+        feedback.textContent = "Selecciona una opción antes de continuar.";
+        feedback.className = "feedback feedback-bad";
+        return;
+      }
+      userAnswers[currentIndex] = selected.value;
+
+      if (currentIndex < currentQuestions.length - 1) {
+        currentIndex++;
+        renderQuestion();
+      } else {
+        showSummary("examen");
+      }
+    }
+
+    function showSummary(tipo) {
+      const total = currentQuestions.length;
+      let correctas = 0;
+
+      for (let i = 0; i < total; i++) {
+        if (userAnswers[i] === currentQuestions[i].correct) correctas++;
+      }
+
+      const porcentaje = ((correctas / total) * 100).toFixed(2);
+
+      summaryDiv.innerHTML = `
+        <h3>Resumen del ${tipo}</h3>
+        <p>Correctas: <strong>${correctas}</strong> de <strong>${total}</strong> (${porcentaje}%).</p>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Pregunta</th>
+              <th>Tu respuesta</th>
+              <th>Correcta</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${currentQuestions
+              .map((q, i) => {
+                const user = userAnswers[i] || "(sin responder)";
+                const isOk = user === q.correct;
+                const color = isOk ? "#4ade80" : "#fca5a5";
+                return `
+                  <tr>
+                    <td>${i + 1}</td>
+                    <td>${q.question}</td>
+                    <td style="color:${color};">${user}</td>
+                    <td>${q.correct}</td>
+                  </tr>
+                `;
+              })
+              .join("")}
+          </tbody>
+        </table>
+      `;
+      summaryDiv.classList.remove('hidden');
+    }
+
+    // Navegación entre pantallas
+    function showMenu() {
+      menuScreen.classList.remove('hidden');
+      quizScreen.classList.add('hidden');
+    }
+
+    function showQuiz() {
+      menuScreen.classList.add('hidden');
+      quizScreen.classList.remove('hidden');
+    }
+
+    btnBackMenu.addEventListener('click', () => {
+      showMenu();
+    });
+
+    // Estado inicial
+    updateBanner();
+  </script>
+</body>
+</html>
